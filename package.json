@@ -1,0 +1,22 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "main": "main.js",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0",
+    "bower": "^1.3.1"
+  },
+  "scripts": {
+    "postinstall": "bower cache clean && bower install",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-json-storage": "^2.0.0",
+    "electron-oauth2": "javikr/electron-oauth2",
+    "spotify-web-api-node": "^2.3.5"
+  }
+}

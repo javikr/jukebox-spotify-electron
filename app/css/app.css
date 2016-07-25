@@ -1,0 +1,122 @@
+/* app css stylesheet */
+
+@font-face {
+    font-family: 'digital'; /*a name to be used later*/
+    src: url('../fonts/DJB Get Digital.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'pixel'; /*a name to be used later*/
+    src: url('../fonts/ka1.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'arcade'; /*a name to be used later*/
+    src: url('../fonts/New Led Board tfb.ttf'); /*URL to font*/
+}
+
+@keyframes blinker {
+    50% { opacity: 0.0; }
+}
+
+body {
+    background-image: url('../img/background_stars.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
+    margin-top: 10px;
+}
+
+.mainTitle {
+    color: #4cae4c;
+    font-family: 'pixel';
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.topBoxTitle {
+    color: whitesmoke;
+    font-family: 'arcade';
+    font-size: large;
+}
+
+.mainContainer {
+    width: 90%;
+    border-style: inset solid;
+    border-width: 5px;
+    border-color: #d58512;
+    background-color: rgba(0,0,0,0.6);
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.topBoxContent {
+    color: whitesmoke;
+    font-family: 'digital';
+    font-size: medium;
+}
+
+.bottomBoxesContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bottomBox {
+    background-image: url('../img/background_white.jpg');
+    background-repeat: repeat;
+    border-color: #d58512;
+    border-style: inset solid;
+    border-width: medium;
+    border-radius: 20px;
+    font-family: 'digital';
+}
+
+.buttonPurple {
+    background-image: url('../img/btn_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    color: whitesmoke;
+    font-size: x-large;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+.buttonPurpleLarge {
+    width: 100px;
+    height: 40px;
+}
+
+.creditsLabel {
+    color: #4cae4c;
+    font-size: 60px;
+}
+
+.tracksContainer {
+    margin-top: 20px;
+
+}
+
+.trackBox {
+    color: whitesmoke;
+    background-color: rgba(255,0,0,0.7);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d58512;
+    font-family: 'digital';
+}
+
+.innerTrackBox {
+    background-color:rgba(255,255,255,0.5);
+    display: inline-block;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
