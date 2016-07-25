@@ -67,17 +67,26 @@ function loginToSpotify() {
 
   const myApiOauth = electronOauth2(config, windowParams);
 
-  storage.has('spotify_token', function(error, hasKey) {
+  storage.has('spotify_token', function (error, hasKey) {
     if (error) throw error;
 
     if (hasKey) {
-      storage.get('spotify_token', function(error, data) {
+      storage.get('spotify_token', function (error, data) {
         if (error) throw error;
+        if (data.refresh_token == undefined) {
+          storage.clear(function(error) {
+            if (error) throw error;
+            loginToSpotify()
+            return
+          });
+        }
 
-        myApiOauth.refreshToken(data.token.refresh_token).then(newToken => {
+        console.log("Try refresh token with : " + data.refresh_token)
+        myApiOauth.refreshToken(data.refresh_token).then(newToken => {
           //use your new token
-          console.log("newToken -> " + newToken.access_token);
-        storage.set('spotify_token', { token: newToken }, function(error) {
+          console.log("newToken access_token -> " + newToken.access_token);
+        console.log("newToken refresh_token -> " + newToken.refresh_token);
+        storage.set('spotify_token', {access_token: newToken.access_token, refresh_token: newToken.refresh_token}, function (error) {
           if (error) throw error;
           mainWindow.webContents.send('reload-tracks');
         });
@@ -86,15 +95,15 @@ function loginToSpotify() {
     } else {
       myApiOauth.getAccessToken(options).then(token => {
         // use your token.access_token
-        console.log("access_token -> " + token.access_token);
-      console.log("refresh_token -> " + token.refresh_token);
+        console.log("token access_token -> " + token.access_token);
+      console.log("token refresh_token -> " + token.refresh_token);
 
-      storage.set('spotify_token', { token: token }, function(error) {
+      storage.set('spotify_token', {access_token: token.access_token, refresh_token: token.refresh_token}, function (error) {
         if (error) throw error;
         mainWindow.webContents.send('reload-tracks');
       });
     })
-  }
+    }
 })
 }
 
