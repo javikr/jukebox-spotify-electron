@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JukeBox</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script language="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script language="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body ng-app="JukeboxApp" ng-controller="mainController">
+<div class="mainTitle">SETTINGS</div>
+<div class="container mainContainer">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <input type="text" class="form-control" placeholder="Playlist id" ng-model="playlistid">
+            <input type="text" class="form-control" placeholder="Playlist uri" ng-model="playlisturi">
+            <button class="btn btn-default" type="button" ng-click="savePlayList()">Save</button>
+        </div>
+    </div>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
+

@@ -1,5 +1,4 @@
 <div class="mainTitle">SPOTIFY JUKEBOX</div>
-<button type="button" class="btn buttonPurple" ng-click="logoutSpotify()">Logout</button>
 <div class="container mainContainer">
     <div class="row">
         <div class="col-xs-5 col-md-offset-1 text-right">
@@ -8,7 +7,7 @@
                 <div class="col-xs-12">
                     {{nowPlayingTrack.track.name}}<br/>{{nowPlayingTrack.track.album.name}}<br/>{{nowPlayingTrack.track.artists[0].name}}<br/>
 
-                    Run time: 02:14<br/>
+                    Run time: {{currentRuntime}}<br/>
                     Coming up: {{comingUp()}}
                 </div>
             </div>

@@ -17,9 +17,8 @@
   "dependencies": {
     "electron-json-storage": "^2.0.0",
     "electron-oauth2": "javikr/electron-oauth2",
-    "lame": "^1.2.4",
+    "moment": "^2.14.1",
     "spotify-node-applescript": "^1.0.0",
-    "spotify-web": "Shigawire/node-spotify-web",
     "spotify-web-api-node": "^2.3.5"
   }
 }

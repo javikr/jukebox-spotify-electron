@@ -7,6 +7,7 @@ const globalShortcut = electron.globalShortcut;
 const electronOauth2 = require('electron-oauth2');
 const storage = require('electron-json-storage');
 const ipcMain = electron.ipcMain;
+const Menu = electron.Menu;
 
 var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca';
 var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
@@ -39,7 +40,7 @@ function createWindow() {
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
@@ -49,7 +50,37 @@ function createWindow() {
     mainWindow = null;
   });
 
+  createMenu()
   setGlobalShortcuts();
+}
+
+function createMenu() {
+  var template = [{
+    label: "Application",
+    submenu: [
+      { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
+      { type: "separator" },
+      { label: 'Settings', click() { didTapSettings() } },
+      { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
+      { label: 'Spotify Logout', click() { mainWindow.webContents.send('logout'); } },
+      { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+    ]}, {
+    label: "Edit",
+    submenu: [
+      { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+      { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+      { type: "separator" },
+      { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+      { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+      { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+    ]}
+  ];
+
+
+  const mainMenu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(mainMenu)
+  //app.dock.setMenu(dockMenu);
 }
 
 function loginToSpotify() {
@@ -70,10 +101,10 @@ function loginToSpotify() {
   storage.has('spotify_token', function (error, hasKey) {
     if (error) throw error;
 
-    if (hasKey) {
+    if (hasKey == true) {
       storage.get('spotify_token', function (error, data) {
         if (error) throw error;
-        if (data.refresh_token == undefined) {
+        if (data.refresh_token === undefined) {
           storage.clear(function(error) {
             if (error) throw error;
             loginToSpotify()
@@ -136,7 +167,19 @@ function setGlobalShortcuts() {
   });
 }
 
+function didTapSettings() {
+  var prefsWindow = new BrowserWindow({
+    width: 400,
+    height: 400,
+    resizable: false,
+    title: "Settings"
+  })
+  prefsWindow.loadURL('file://' + __dirname + '/app/settings.html')
+}
+
 ipcMain.on('request_oauth_token', function () {
   console.log("request_oauth_token");
   loginToSpotify()
 });
+
+
