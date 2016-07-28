@@ -22,18 +22,27 @@ var config = {
   redirectUri: REDIRECT_URI
 };
 
+var prefsWindow;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow;
 
-function createWindow() {
+function launchApp() {
+  createMainWindow()
+  createMenu()
+  createSettingsWindow()
+  setGlobalShortcuts();
+}
+
+function createMainWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
     resizable: false,
-    title: "Jukebox"
+    title: "Jukebox",
+    show: false
   });
 
   // and load the index.html of the app.
@@ -50,8 +59,20 @@ function createWindow() {
     mainWindow = null;
   });
 
-  createMenu()
-  setGlobalShortcuts();
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
+}
+
+function createSettingsWindow() {
+  prefsWindow = new BrowserWindow({
+    width: 400,
+    height: 400,
+    resizable: false,
+    title: "Settings",
+    show: false,
+    parent: mainWindow
+  });
 }
 
 function createMenu() {
@@ -62,7 +83,6 @@ function createMenu() {
       { type: "separator" },
       { label: 'Settings', click() { didTapSettings() } },
       { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
-      { label: 'Spotify Logout', click() { mainWindow.webContents.send('logout'); } },
       { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
     ]}, {
     label: "Edit",
@@ -72,8 +92,11 @@ function createMenu() {
       { type: "separator" },
       { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
       { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
-      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
-      { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" }
+      ]}, {
+    label: "Spotify",
+    submenu: [
+      { label: 'Logout', click() { mainWindow.webContents.send('logout'); } }
     ]}
   ];
 
@@ -139,7 +162,7 @@ function loginToSpotify() {
 }
 
 // initialization and is ready to create browser windows.
-app.on('ready', createWindow);
+app.on('ready', launchApp);
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -168,13 +191,10 @@ function setGlobalShortcuts() {
 }
 
 function didTapSettings() {
-  var prefsWindow = new BrowserWindow({
-    width: 400,
-    height: 400,
-    resizable: false,
-    title: "Settings"
-  })
   prefsWindow.loadURL('file://' + __dirname + '/app/settings.html')
+  prefsWindow.once('ready-to-show', () => {
+    prefsWindow.show()
+  })
 }
 
 ipcMain.on('request_oauth_token', function () {
@@ -182,4 +202,12 @@ ipcMain.on('request_oauth_token', function () {
   loginToSpotify()
 });
 
+ipcMain.on("playlist-saved", function () {
+  console.log("playlist-saved");
+  mainWindow.webContents.send('reload-tracks');
+})
 
+ipcMain.on("close-settings-window", function () {
+  console.log("close-settings-window");
+  prefsWindow.hide()
+})

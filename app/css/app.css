@@ -98,7 +98,7 @@ body {
 
 .tracksContainer {
     margin-top: 20px;
-
+    min-height: 255px
 }
 
 .trackBox {
