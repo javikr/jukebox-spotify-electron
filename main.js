@@ -188,6 +188,26 @@ function setGlobalShortcuts() {
   globalShortcut.register('5', function () {
     mainWindow.webContents.send('add-credits', 1);
   });
+
+  globalShortcut.register('Left', function () {
+    mainWindow.webContents.send('click-arrow', "Left");
+  });
+
+  globalShortcut.register('Right', function () {
+    mainWindow.webContents.send('click-arrow', "Right");
+  });
+
+  globalShortcut.register('Up', function () {
+    mainWindow.webContents.send('click-arrow', "Up");
+  });
+
+  globalShortcut.register('Down', function () {
+    mainWindow.webContents.send('click-arrow', "Down");
+  });
+
+  globalShortcut.register('1', function () {
+    mainWindow.webContents.send('click-enter');
+  });
 }
 
 function didTapSettings() {

@@ -10,6 +10,7 @@ var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
 var REDIRECT_URI = 'http://localhost';
 
 
+
 // credentials are optional
 var spotifyApi = new SpotifyWebApi({
     clientId: CLIENT_ID,
@@ -30,18 +31,10 @@ app.controller('mainController', function ($scope) {
     $scope.nowPlayingTrack = null;
     $scope.currentPage = 0
     $scope.currentRuntime = 0
+    $scope.selectedButtonIndex = 1
 
     $scope.addTrackToUpcoming = function (trackIndex) {
-        if ($scope.credits <= 0 || $scope.tracksList.length == 0) {
-            playSound('poush');
-            return;
-        }
-        $scope.credits -= 1;
-
-        var trackInfo = $scope.tracksList[trackIndex-1]
-        $scope.upcomingTrackList.push(trackInfo);
-
-        playSound('collect');
+        manageAddTrackToUpcomingList(trackIndex);
     };
 
     $scope.loadPreviousPage = function () {
@@ -79,8 +72,22 @@ app.controller('mainController', function ($scope) {
         });
     });
 
-    ipcRenderer.on('add-credits', function (credits) {
-        addCredits(1)
+    ipcRenderer.on('add-credits', function (event, credits) {
+        addCredits(credits)
+    });
+
+    ipcRenderer.on('click-arrow', function (event, direction) {
+        console.log("click arrow -> " + direction);
+        switch (direction) {
+            case 'Right': moveCursorRight(); return
+            case 'Left': moveCursorLeft(); return
+            case 'Up': moveCursorUp(); return
+            case 'Down': moveCursorDown(); return
+        }
+    });
+
+    ipcRenderer.on('click-enter', function () {
+        mamageClickEnter()
     });
 
     ipcRenderer.on('reload-tracks', function () {
@@ -109,6 +116,20 @@ app.controller('mainController', function ($scope) {
     loadSavedTracks($scope.currentPage)
 
     // METHODS
+
+    function manageAddTrackToUpcomingList(trackIndex) {
+        console.log('manageAddTrackToUpcomingList');
+        if ($scope.credits <= 0 || $scope.tracksList.length == 0) {
+            playSound('poush');
+            return;
+        }
+        $scope.credits -= 1;
+
+        var trackInfo = $scope.tracksList[trackIndex-1]
+        $scope.upcomingTrackList.push(trackInfo);
+
+        playSound('collect');
+    }
 
     function playSound(soundName) {
         var audio = new Audio(__dirname + '/sounds/'+soundName+'.wav');
@@ -325,8 +346,105 @@ app.controller('mainController', function ($scope) {
             updateCurrentTrackInfo()
         });
     }
+
+    function moveCursorRight() {
+        switch ($scope.selectedButtonIndex) {
+            case 1: $scope.selectedButtonIndex = 2; break;
+            case 2: $scope.selectedButtonIndex = 3; break;
+            case 3: $scope.selectedButtonIndex = 4; break;
+            case 4: $scope.selectedButtonIndex = 5; break;
+            case 5: $scope.selectedButtonIndex = 6; break;
+            case 6: $scope.selectedButtonIndex = 6; break;
+            case 7: $scope.selectedButtonIndex = 8; break;
+            case 8: $scope.selectedButtonIndex = 9; break;
+            case 9: $scope.selectedButtonIndex = 10; break;
+            case 10: $scope.selectedButtonIndex = 11; break;
+            case 11: $scope.selectedButtonIndex = 12; break;
+            case 12: $scope.selectedButtonIndex = 12; break;
+            case 13: $scope.selectedButtonIndex = 14; break;
+            case 14: $scope.selectedButtonIndex = 14; break;
+        }
+        $scope.$apply();
+    }
+
+    function moveCursorLeft() {
+        switch ($scope.selectedButtonIndex) {
+            case 1: $scope.selectedButtonIndex = 1; break;
+            case 2: $scope.selectedButtonIndex = 1; break;
+            case 3: $scope.selectedButtonIndex = 2; break;
+            case 4: $scope.selectedButtonIndex = 3; break;
+            case 5: $scope.selectedButtonIndex = 4; break;
+            case 6: $scope.selectedButtonIndex = 6; break;
+            case 7: $scope.selectedButtonIndex = 6; break;
+            case 8: $scope.selectedButtonIndex = 7; break;
+            case 9: $scope.selectedButtonIndex = 8; break;
+            case 10: $scope.selectedButtonIndex = 9; break;
+            case 11: $scope.selectedButtonIndex = 10; break;
+            case 12: $scope.selectedButtonIndex = 11; break;
+            case 13: $scope.selectedButtonIndex = 13; break;
+            case 14: $scope.selectedButtonIndex = 13; break;
+        }
+        $scope.$apply();
+    }
+
+    function moveCursorUp() {
+        switch ($scope.selectedButtonIndex) {
+            case 1: $scope.selectedButtonIndex = 1; break;
+            case 2: $scope.selectedButtonIndex = 2; break;
+            case 3: $scope.selectedButtonIndex = 3; break;
+            case 4: $scope.selectedButtonIndex = 4; break;
+            case 5: $scope.selectedButtonIndex = 5; break;
+            case 6: $scope.selectedButtonIndex = 6; break;
+            case 7: $scope.selectedButtonIndex = 1; break;
+            case 8: $scope.selectedButtonIndex = 2; break;
+            case 9: $scope.selectedButtonIndex = 3; break;
+            case 10: $scope.selectedButtonIndex = 4; break;
+            case 11: $scope.selectedButtonIndex = 5; break;
+            case 12: $scope.selectedButtonIndex = 6; break;
+            case 13: $scope.selectedButtonIndex = 8; break;
+            case 14: $scope.selectedButtonIndex = 11; break;
+        }
+        $scope.$apply();
+    }
+
+    function moveCursorDown() {
+        switch ($scope.selectedButtonIndex) {
+            case 1: $scope.selectedButtonIndex = 7; break;
+            case 2: $scope.selectedButtonIndex = 8; break;
+            case 3: $scope.selectedButtonIndex = 9; break;
+            case 4: $scope.selectedButtonIndex = 10; break;
+            case 5: $scope.selectedButtonIndex = 11; break;
+            case 6: $scope.selectedButtonIndex = 12; break;
+            case 7: $scope.selectedButtonIndex = 13; break;
+            case 8: $scope.selectedButtonIndex = 13; break;
+            case 9: $scope.selectedButtonIndex = 13; break;
+            case 10: $scope.selectedButtonIndex = 14; break;
+            case 11: $scope.selectedButtonIndex = 14; break;
+            case 12: $scope.selectedButtonIndex = 14; break;
+            case 13: $scope.selectedButtonIndex = 13; break;
+            case 14: $scope.selectedButtonIndex = 14; break;
+        }
+        $scope.$apply();
+    }
+
+    function mamageClickEnter() {
+        console.log("click enter");
+        switch ($scope.selectedButtonIndex) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12: manageAddTrackToUpcomingList($scope.selectedButtonIndex); break;
+            case 13: loadSavedTracks($scope.currentPage - 1); break;
+            case 14: loadSavedTracks($scope.currentPage + 1); break;
+        }
+    }
 });
-
-
-
 

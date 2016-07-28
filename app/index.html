@@ -4,8 +4,9 @@
   <title>JukeBox</title>
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <script language="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script language="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script language="text/javascript" src="index.js"></script>
 </head>
 
 <body ng-app="JukeboxApp" ng-controller="mainController">
@@ -51,32 +52,32 @@
       <h4>SELECTION</h4>
       <div class="row">
         <div class="col-xs-12 text-center">
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(1)">1</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(2)">2</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(3)">3</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(4)">4</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(5)">5</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(6)">6</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 1}" ng-click="addTrackToUpcoming(1)">1</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 2}" ng-click="addTrackToUpcoming(2)">2</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 3}" ng-click="addTrackToUpcoming(3)">3</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 4}" ng-click="addTrackToUpcoming(4)">4</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 5}" ng-click="addTrackToUpcoming(5)">5</button>
+          <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 6}" ng-click="addTrackToUpcoming(6)">6</button>
         </div>
       </div>
       <br/>
       <div class="row">
         <div class="col-xs-12 text-center">
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(7)">7</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(8)">8</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(9)">9</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(10)">10</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(11)">11</button>
-          <button type="button" class="btn buttonPurple" ng-click="addTrackToUpcoming(12)">12</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 7}" ng-click="addTrackToUpcoming(7)">7</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 8}" ng-click="addTrackToUpcoming(8)">8</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 9}" ng-click="addTrackToUpcoming(9)">9</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 10}" ng-click="addTrackToUpcoming(10)">10</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 11}" ng-click="addTrackToUpcoming(11)">11</button>
+          <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 12}" ng-click="addTrackToUpcoming(12)">12</button>
         </div>
       </div>
       <br/>
       <div class="row">
         <div class="col-xs-6 text-center">
-          <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-click="loadPreviousPage()">PREV</button>
+          <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 13}" ng-click="loadPreviousPage()">PREV</button>
         </div>
         <div class="col-xs-6 text-center">
-          <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-click="loadNextPage()">NEXT</button>
+          <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 14}" ng-click="loadNextPage()">NEXT</button>
         </div>
       </div>
     </div>
@@ -92,8 +93,7 @@
     </div>
   </div>
 </div>
-  <script src="bower_components/angular/angular.js"></script>
- <script src="js/mainController.js"></script>
- <script src="index.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/mainController.js"></script>
 </body>
 </html>
