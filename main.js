@@ -40,9 +40,10 @@ function createMainWindow() {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
-    resizable: false,
+    resizable: true,
     title: "Jukebox",
-    show: false
+    show: false,
+    maximizable: true
   });
 
   // and load the index.html of the app.

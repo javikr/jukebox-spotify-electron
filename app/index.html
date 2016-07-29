@@ -12,7 +12,7 @@
 <body ng-app="JukeboxApp" ng-controller="mainController">
 <div class="mainTitle">SPOTIFY JUKEBOX</div>
 <div class="container mainContainer">
-  <div class="row">
+  <div class="row topBoxMainContent">
     <div class="col-xs-5 col-md-offset-1 text-right">
       <div class="topBoxTitle blink_me">NOW PLAYING</div>
       <div class="row topBoxContent">
@@ -73,10 +73,8 @@
       </div>
       <br/>
       <div class="row">
-        <div class="col-xs-6 text-center">
+        <div class="col-xs-12 text-center">
           <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 13}" ng-click="loadPreviousPage()">PREV</button>
-        </div>
-        <div class="col-xs-6 text-center">
           <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 14}" ng-click="loadNextPage()">NEXT</button>
         </div>
       </div>

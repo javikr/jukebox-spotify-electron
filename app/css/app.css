@@ -23,6 +23,7 @@ body {
     background-image: url('../img/background_stars.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-color: #000000;
     margin-top: 10px;
 }
@@ -51,12 +52,17 @@ body {
     border-top-left-radius: 30%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-top: 5px;
 }
 
 .topBoxContent {
     color: whitesmoke;
     font-family: 'digital';
     font-size: medium;
+}
+
+.topBoxMainContent {
+    margin-top: 10px;
 }
 
 .bottomBoxesContainer {
@@ -122,7 +128,7 @@ body {
 }
 
 .selected {
-    color: #2b542c;
-    border-width: 1px;
-    border-color: #3c3c3c;
+    color: yellow;
+    border-width: 4px;
+    border-color: yellow;
 }

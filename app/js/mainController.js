@@ -411,10 +411,10 @@ app.controller('mainController', function ($scope) {
                 $scope.selectedButtonIndex = 4;
                 break;
             case 6:
-                $scope.selectedButtonIndex = 6;
+                $scope.selectedButtonIndex = 5;
                 break;
             case 7:
-                $scope.selectedButtonIndex = 6;
+                $scope.selectedButtonIndex = 7;
                 break;
             case 8:
                 $scope.selectedButtonIndex = 7;
@@ -567,5 +567,6 @@ app.controller('mainController', function ($scope) {
     spotifyPlayer.player.on('ready', function () {
         savePlayListInScope()
         loadSavedTracks($scope.currentPage)
+        spotifyPlayer.player.play()
     });
 });
