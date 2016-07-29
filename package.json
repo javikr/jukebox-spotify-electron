@@ -19,6 +19,7 @@
     "electron-oauth2": "javikr/electron-oauth2",
     "moment": "^2.14.1",
     "spotify-node-applescript": "^1.0.0",
-    "spotify-web-api-node": "^2.3.5"
+    "spotify-web-api-node": "^2.3.5",
+    "spotify-web-helper": "javikr/spotify-web-helper"
   }
 }
