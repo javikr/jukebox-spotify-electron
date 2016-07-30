@@ -4,34 +4,24 @@
     <title>JukeBox</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
-    <script language="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script language="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body ng-app="JukeboxApp" ng-controller="settingsController">
 <div class="mainTitle">SETTINGS</div>
 <br/>
-<div class="container mainContainer">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">ID</span>
-                <input type="text" class="form-control" placeholder="Playlist ID" aria-describedby="basic-addon1" ng-model="playlistid">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">URL</span>
-                <input type="text" class="form-control" placeholder="Playlist URI" aria-describedby="basic-addon1" ng-model="playlisturi">
-            </div>
-            <button class="btn btn-default" type="button" ng-click="savePlayList()">Save</button>
+<div class="container">
+    <div class="dropdown">
+        <button class="dropbtn">Playlists</button>
+        <div class="dropdown-content" ng-repeat="playlist in playlists">
+            <a href="#" ng-click="savePlayList(playlist.uri, playlist.id, playlist.owner.id)">{{playlist.name}}</a>
         </div>
     </div>
 </div>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="js/app.js"></script>
-<script src="js/services.js"></script>
 <script src="js/settingsController.js"></script>
-<script src="index.js"></script>
+<script language="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script language="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script language="text/javascript" src="bower_components/bootstrap/js/dropdown.js"></script>
 </body>
 </html>
 

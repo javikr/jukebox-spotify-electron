@@ -67,8 +67,8 @@ function createMainWindow() {
 
 function createSettingsWindow() {
   prefsWindow = new BrowserWindow({
-    width: 400,
-    height: 400,
+    width: 600,
+    height: 600,
     resizable: false,
     title: "Settings",
     show: false,

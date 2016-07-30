@@ -2,24 +2,20 @@ const electron = require('electron');
 const ipcRenderer = electron.ipcRenderer;
 const storage = require('electron-json-storage');
 const SpotifyWebApi = require('spotify-web-api-node');
-//const spotifyPlayer = require('spotify-node-applescript');
 const moment = require('moment');
 
 var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca';
 var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
 var REDIRECT_URI = 'http://localhost';
 
-var SpotifyWebHelper = require('spotify-web-helper')
-var spotifyPlayer = SpotifyWebHelper()
-
-console.log('spotifyPlayer -> ' + spotifyPlayer);
-
-// credentials are optional
 var spotifyApi = new SpotifyWebApi({
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     redirectUri: REDIRECT_URI
 });
+
+var SpotifyWebHelper = require('spotify-web-helper')
+var spotifyPlayer = SpotifyWebHelper()
 
 var app = angular.module('JukeboxApp', []);
 
@@ -105,24 +101,16 @@ app.controller('mainController', function ($scope) {
     });
 
     ipcRenderer.on('reload-tracks', function () {
-        spotifyApi.getMe()
-            .then(function (data) {
-                console.log('Some information about the authenticated user', data.body);
-                storage.set('user_info', {user_id: data.body.id, user_name: data.body.display_name}, function (error) {
-                    if (error) throw error;
-                    storage.get('spotify_token', function (error, data) {
-                        if (error) throw error;
+        savePlayListInScope()
 
-                        spotifyApi.setAccessToken(data.access_token);
-                        //doLoadSavedTracks($scope.currentPage)
+        storage.get('spotify_token', function (error, data) {
+            if (error) throw error;
 
-                        doLoadTracksForCurrentPlaylist($scope.currentPage);
-                    });
-                });
-            }, function (err) {
-                console.log('Something went wrong!', err);
-            });
+            spotifyApi.setAccessToken(data.access_token);
+            //doLoadSavedTracks($scope.currentPage)
 
+            doLoadTracksForCurrentPlaylist($scope.currentPage);
+        });
     });
 
     // METHODS
@@ -170,7 +158,6 @@ app.controller('mainController', function ($scope) {
                 spotifyApi.setAccessToken(data.access_token);
                 //doLoadSavedTracks(offset)
 
-                // 6dHXEp5dznJXBL6JqB8Opm
                 doLoadTracksForCurrentPlaylist(offset);
             });
         });
@@ -196,48 +183,24 @@ app.controller('mainController', function ($scope) {
 
         var playlistData = $scope.playList;
 
-            if (playlistData.playlist_id === undefined) {
-                console.log("ERROR: PLAYLIST NO CONFIGURADO")
-                return
-            }
+        if (playlistData === undefined) {
+            console.log("ERROR: PLAYLIST NO CONFIGURADO")
+            return
+        }
 
-            storage.get('user_info', function (error, userData) {
-                if (error) throw error;
+        console.log("user_id -> " + playlistData.playlist_user);
+        console.log("playlist id -> " + playlistData.playlist_id);
 
-                if (userData.user_id === undefined) {
-                    reloadMeInfo()
-                    return;
-                }
-
-                console.log("user_id -> " + userData.user_id);
-                console.log("playlist id -> " + playlistData.playlist_id);
-
-                spotifyApi.getPlaylistTracks(userData.user_id, playlistData.playlist_id, {
-                    'offset': offset * 11, 'limit': 12
-                })
-                    .then(function (data) {
-                        playSound('bonus');
-                        didLoadedTracks(data.body.items);
-                        $scope.currentPage = offset
-                        $scope.$apply();
-                    }, function (err) {
-                        didGetErrorLoadingTracks(err);
-                    });
-
-            });
-    }
-
-    function reloadMeInfo() {
-        spotifyApi.getMe()
+        spotifyApi.getPlaylistTracks(playlistData.playlist_user, playlistData.playlist_id, {
+            'offset': offset * 11, 'limit': 12
+        })
             .then(function (data) {
-                console.log('Some information about the authenticated user', data.body);
-                storage.set('user_info', {user_id: data.body.id, user_name: data.body.display_name}, function (error) {
-                    if (error) throw error;
-
-                    loadSavedTracks($scope.currentPage)
-                });
+                playSound('bonus');
+                didLoadedTracks(data.body.items);
+                $scope.currentPage = offset
+                $scope.$apply();
             }, function (err) {
-                console.log('Something went wrong!', err);
+                didGetErrorLoadingTracks(err);
             });
     }
 
@@ -325,9 +288,9 @@ app.controller('mainController', function ($scope) {
     function playTrack(trackInfo) {
         var playlistData = $scope.playList
         if (playlistData !== undefined && playlistData.playlist_uri !== undefined) {
-                console.log("PLAY TRACK -> " + trackInfo.track.uri);
-                spotifyPlayer.player.play(trackInfo.track.uri, playlistData.playlist_uri);
-                updateCurrentTrackInfo()
+            console.log("PLAY TRACK -> " + trackInfo.track.uri);
+            spotifyPlayer.player.play(trackInfo.track.uri, playlistData.playlist_uri);
+            updateCurrentTrackInfo()
         } else {
             console.log("ERROR: PLAYLIST NOT DEFINED!");
         }
@@ -563,6 +526,7 @@ app.controller('mainController', function ($scope) {
         }
     }
 
+    // START HERE
 
     spotifyPlayer.player.on('ready', function () {
         savePlayListInScope()
