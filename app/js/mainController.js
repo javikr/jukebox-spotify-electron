@@ -128,24 +128,11 @@ app.controller('mainController', function ($scope) {
 
         playSound('bonus');
     }
-
+    
     function loadTracks(offset) {
-        storage.has('spotify_token', function (error, hasKey) {
-            if (error) throw error;
-            if (hasKey == false) {
-                ipcRenderer.send("request_oauth_token")
-                return
-            }
-
-            storage.get('spotify_token', function (error, data) {
-                if (error) throw error;
-
-                console.log("access_token_data -> " + data.access_token);
-                spotifyApi.setAccessToken(data.access_token);
-
-                doLoadTracksForCurrentPlaylist(offset);
-            });
-        });
+        checkAccessToken(function () {
+            doLoadTracksForCurrentPlaylist(offset)
+        })
     }
 
     function doLoadTracksForCurrentPlaylist(offset) {
@@ -206,7 +193,7 @@ app.controller('mainController', function ($scope) {
             updateCurrentTrackInfo()
 
             var state = spotifyPlayer.status
-            var newTrackId = state.track.track_resource.uri
+            var currentTrackUri = state.track.track_resource.uri
 
             //console.log('currentTrackId ->' + currentTrackId)
             //console.log('newTrackId ->' + newTrackId)
@@ -214,7 +201,7 @@ app.controller('mainController', function ($scope) {
             //console.log('track position -> ' + state.playing_position)
             //console.log('track total -> ' + $scope.nowPlayingTrack.track.duration)
 
-            if (loadingTrack == false && (loadingTrackUri == undefined || newTrackId == loadingTrackUri) && state.playing_position > 5 && Math.ceil(state.playing_position) == $scope.nowPlayingTrack.track.duration - 1) {
+            if (loadingTrack == false && (loadingTrackUri == undefined || currentTrackUri == loadingTrackUri) && state.playing_position > 5 && Math.ceil(state.playing_position) == $scope.nowPlayingTrack.track.duration - 1) {
                 loadingTrack == true
                 $scope.nowPlayingTrack.track.duration = 0
                 $scope.$apply(function () {
@@ -503,6 +490,22 @@ app.controller('mainController', function ($scope) {
                 loadTracks($scope.currentPage + 1);
                 break;
         }
+    }
+
+    function checkAccessToken(completion) {
+        storage.has('spotify_token', function (error, hasKey) {
+            if (error) throw error;
+
+            if (hasKey == true) {
+                storage.get('spotify_token', function (error, data) {
+                    if (error) throw error;
+                    spotifyApi.setAccessToken(data.access_token);
+                    completion()
+                });
+            } else {
+                ipcRenderer.send("request_oauth_token")
+            }
+        })
     }
 
     // START HERE
