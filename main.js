@@ -23,9 +23,6 @@ var config = {
 };
 
 var prefsWindow;
-
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 var mainWindow;
 
 function launchApp() {
@@ -62,7 +59,7 @@ function createMainWindow() {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
-  })
+})
 }
 
 function createSettingsWindow() {
@@ -94,7 +91,7 @@ function createMenu() {
       { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
       { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
       { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" }
-      ]}, {
+    ]}, {
     label: "Spotify",
     submenu: [
       { label: 'Logout', click() { mainWindow.webContents.send('logout'); } }
@@ -132,21 +129,24 @@ function loginToSpotify() {
           storage.clear(function(error) {
             if (error) throw error;
             loginToSpotify()
-            return
           });
+          return
+        } else {
+          console.log("Try refresh token with : " + data.refresh_token)
+          myApiOauth.refreshToken(data.refresh_token).then(newToken => {
+            //use your new token
+            console.log("newToken access_token -> " + newToken.access_token);
+          console.log("newToken refresh_token -> " + newToken.refresh_token);
+          storage.set('spotify_token', {
+            access_token: newToken.access_token,
+            refresh_token: newToken.refresh_token
+          }, function (error) {
+            if (error) throw error;
+            mainWindow.webContents.send('reload-tracks');
+          });
+        })
         }
-
-        console.log("Try refresh token with : " + data.refresh_token)
-        myApiOauth.refreshToken(data.refresh_token).then(newToken => {
-          //use your new token
-          console.log("newToken access_token -> " + newToken.access_token);
-        console.log("newToken refresh_token -> " + newToken.refresh_token);
-        storage.set('spotify_token', {access_token: newToken.access_token, refresh_token: newToken.refresh_token}, function (error) {
-          if (error) throw error;
-          mainWindow.webContents.send('reload-tracks');
-        });
-      })
-      })
+    })
     } else {
       myApiOauth.getAccessToken(options).then(token => {
         // use your token.access_token
@@ -159,7 +159,7 @@ function loginToSpotify() {
       });
     })
     }
-})
+  })
 }
 
 // initialization and is ready to create browser windows.
@@ -212,10 +212,13 @@ function setGlobalShortcuts() {
 }
 
 function didTapSettings() {
+  if (prefsWindow.isDestroyed()) {
+    createSettingsWindow()
+  }
   prefsWindow.loadURL('file://' + __dirname + '/app/settings.html')
   prefsWindow.once('ready-to-show', () => {
     prefsWindow.show()
-  })
+})
 }
 
 ipcMain.on('request_oauth_token', function () {

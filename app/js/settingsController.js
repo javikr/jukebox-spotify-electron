@@ -43,27 +43,55 @@ app.controller('settingsController', function ($scope) {
                 if (error) throw error;
 
                 spotifyApi.setAccessToken(data.access_token);
-
+                console.log("update access token -> " + data.access_token)
                 doLoadUserPlayLists();
             });
         });
     }
 
     function doLoadUserPlayLists() {
-        storage.get('user_info', function (error, userData) {
+        storage.has('user_info', function (error, hasKey) {
             if (error) throw error;
+            if (hasKey == false) {
+                reloadMeInfo()
+                return
+            }
 
-            console.log("user_id -> " + userData.user_id);
+            storage.get('user_info', function (error, userData) {
+                if (error) throw error;
 
-            spotifyApi.getUserPlaylists(userData.user_id)
-                .then(function(data) {
-                    console.log('Retrieved playlists', data.body);
-                    $scope.playlists = data.body.items;
-                    $scope.$apply();
-                },function(err) {
-                    console.log('Something went wrong!', err);
-                });
+                console.log("user_id -> " + userData.user_id);
+
+                spotifyApi.getUserPlaylists(userData.user_id)
+                    .then(function(data) {
+                        console.log('Retrieved playlists', data.body);
+                        $scope.playlists = data.body.items;
+                        $scope.$apply();
+                    },function(err) {
+                        console.log('Something went wrong!', err);
+                        if (err.statusCode == 401) {
+                            ipcRenderer.send("request_oauth_token")
+                        }
+                    });
+            });
         });
+    }
+
+    function reloadMeInfo() {
+        spotifyApi.getMe()
+            .then(function(data) {
+                console.log('Some information about the authenticated user', data.body);
+                storage.set('user_info', {user_id: data.body.id, user_name: data.body.display_name}, function (error) {
+                    if (error) throw error;
+
+                    doLoadUserPlayLists()
+                });
+            }, function(err) {
+                console.log('Something went wrong!', err);
+                if (err.statusCode == 401) {
+                    ipcRenderer.send("request_oauth_token")
+                }
+            });
     }
 
     // LOAD PLAYLISTS

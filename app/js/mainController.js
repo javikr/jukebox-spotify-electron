@@ -103,14 +103,7 @@ app.controller('mainController', function ($scope) {
     ipcRenderer.on('reload-tracks', function () {
         savePlayListInScope()
 
-        storage.get('spotify_token', function (error, data) {
-            if (error) throw error;
 
-            spotifyApi.setAccessToken(data.access_token);
-            //doLoadSavedTracks($scope.currentPage)
-
-            doLoadTracksForCurrentPlaylist($scope.currentPage);
-        });
     });
 
     // METHODS
@@ -241,7 +234,6 @@ app.controller('mainController', function ($scope) {
 
             if (Math.ceil(state.playing_position) == $scope.nowPlayingTrack.track.duration - 1) {
                 $scope.nowPlayingTrack.track.duration = 0
-
                 playNextTrack()
             }
             $scope.$apply();
@@ -303,6 +295,15 @@ app.controller('mainController', function ($scope) {
                     if (error) throw error;
 
                     $scope.playList = playlistData
+
+                    storage.get('spotify_token', function (error, data) {
+                        if (error) throw error;
+
+                        spotifyApi.setAccessToken(data.access_token);
+                        //doLoadSavedTracks($scope.currentPage)
+
+                        doLoadTracksForCurrentPlaylist($scope.currentPage);
+                    });
                 });
             }
         });
