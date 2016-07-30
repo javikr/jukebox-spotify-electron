@@ -8,10 +8,17 @@ const electronOauth2 = require('electron-oauth2');
 const storage = require('electron-json-storage');
 const ipcMain = electron.ipcMain;
 const Menu = electron.Menu;
+const SpotifyWebApi = require('spotify-web-api-node');
 
 var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca';
 var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
 var REDIRECT_URI = 'http://localhost';
+
+var spotifyApi = new SpotifyWebApi({
+  clientId: CLIENT_ID,
+  clientSecret: CLIENT_SECRET,
+  redirectUri: REDIRECT_URI
+});
 
 var config = {
   clientId: CLIENT_ID,
@@ -22,18 +29,19 @@ var config = {
   redirectUri: REDIRECT_URI
 };
 
-var prefsWindow;
 var mainWindow;
+var mainMenu;
 
 function launchApp() {
-  createMainWindow()
-  createMenu()
-  createSettingsWindow()
-  setGlobalShortcuts();
+  setGlobalShortcuts()
+  checkAccessToken(function () {
+    loadUserPlaylists()
+  })
 }
 
-function createMainWindow() {
-  // Create the browser window.
+function createAndShowMainWindow() {
+  if (mainWindow !== undefined) { return }
+
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
@@ -43,7 +51,6 @@ function createMainWindow() {
     maximizable: true
   });
 
-  // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
 
   // Open the DevTools.
@@ -59,106 +66,6 @@ function createMainWindow() {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
-})
-}
-
-function createSettingsWindow() {
-  prefsWindow = new BrowserWindow({
-    width: 600,
-    height: 600,
-    resizable: false,
-    title: "Settings",
-    show: false,
-    parent: mainWindow
-  });
-}
-
-function createMenu() {
-  var template = [{
-    label: "Application",
-    submenu: [
-      { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
-      { type: "separator" },
-      { label: 'Settings', click() { didTapSettings() } },
-      { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
-      { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
-    ]}, {
-    label: "Edit",
-    submenu: [
-      { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
-      { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
-      { type: "separator" },
-      { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
-      { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
-      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" }
-    ]}, {
-    label: "Spotify",
-    submenu: [
-      { label: 'Logout', click() { mainWindow.webContents.send('logout'); } }
-    ]}
-  ];
-
-
-  const mainMenu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(mainMenu)
-  //app.dock.setMenu(dockMenu);
-}
-
-function loginToSpotify() {
-  const options = {
-    scope: 'user-read-private playlist-read-private playlist-read-collaborative user-library-read'
-  };
-
-  const windowParams = {
-    alwaysOnTop: true,
-    autoHideMenuBar: true,
-    webPreferences: {
-      nodeIntegration: false
-    }
-  };
-
-  const myApiOauth = electronOauth2(config, windowParams);
-
-  storage.has('spotify_token', function (error, hasKey) {
-    if (error) throw error;
-
-    if (hasKey == true) {
-      storage.get('spotify_token', function (error, data) {
-        if (error) throw error;
-        if (data.refresh_token === undefined) {
-          storage.clear(function(error) {
-            if (error) throw error;
-            loginToSpotify()
-          });
-          return
-        } else {
-          console.log("Try refresh token with : " + data.refresh_token)
-          myApiOauth.refreshToken(data.refresh_token).then(newToken => {
-            //use your new token
-            console.log("newToken access_token -> " + newToken.access_token);
-          console.log("newToken refresh_token -> " + newToken.refresh_token);
-          storage.set('spotify_token', {
-            access_token: newToken.access_token,
-            refresh_token: newToken.refresh_token
-          }, function (error) {
-            if (error) throw error;
-            mainWindow.webContents.send('reload-tracks');
-          });
-        })
-        }
-    })
-    } else {
-      myApiOauth.getAccessToken(options).then(token => {
-        // use your token.access_token
-        console.log("token access_token -> " + token.access_token);
-      console.log("token refresh_token -> " + token.refresh_token);
-
-      storage.set('spotify_token', {access_token: token.access_token, refresh_token: token.refresh_token}, function (error) {
-        if (error) throw error;
-        mainWindow.webContents.send('reload-tracks');
-      });
-    })
-    }
   })
 }
 
@@ -178,10 +85,9 @@ app.on('activate', function () {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) {
-    createWindow();
+    createAndShowMainWindow();
   }
 });
-
 
 function setGlobalShortcuts() {
   globalShortcut.unregisterAll();
@@ -211,27 +117,187 @@ function setGlobalShortcuts() {
   });
 }
 
-function didTapSettings() {
-  if (prefsWindow.isDestroyed()) {
-    createSettingsWindow()
-  }
-  prefsWindow.loadURL('file://' + __dirname + '/app/settings.html')
-  prefsWindow.once('ready-to-show', () => {
-    prefsWindow.show()
-})
+function createMenuWithPlaylists(playlists) {
+  var template = [{
+    label: "Application",
+    submenu: [
+      { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
+      { type: "separator" },
+      { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
+      { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+    ]}, {
+    label: "Edit",
+    submenu: [
+      { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+      { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+      { type: "separator" },
+      { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+      { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" }
+    ]}, {
+    label: "Spotify",
+    submenu: [
+      { label: 'Logout', click() { mainWindow.webContents.send('logout'); } },
+      { label: 'Playlists', submenu: [] }
+    ]}
+  ];
+
+  var playlistsSubmenu = template[2].submenu[1].submenu;
+  playlists.forEach(function(playlist) {
+    playlistsSubmenu.push({ label: playlist.name,type: 'radio', click() { didSelectPlaylist(playlist) }})
+  });
+
+  mainMenu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(mainMenu)
 }
+
+function loadUserPlaylists() {
+  storage.has('user_info', function (error, hasKey) {
+    if (error) throw error;
+    if (hasKey == false) {
+      reloadMeInfo()
+      return
+    }
+
+    storage.get('user_info', function (error, userData) {
+      if (error) throw error;
+
+      console.log("user_id -> " + userData.user_id);
+
+      spotifyApi.getUserPlaylists(userData.user_id)
+          .then(function(data) {
+            console.log('Retrieved playlists', data.body);
+            createMenuWithPlaylists(data.body.items)
+            createAndShowMainWindow()
+            checkAnyPlaylistSelected(data.body.items[0])
+          },function(err) {
+            console.log('Something went wrong!', err);
+            if (err.statusCode == 401 || err.statusCode == 403) {
+              loginToSpotify()
+            }
+          });
+      });
+  });
+}
+
+function checkAnyPlaylistSelected(firstPlaylist) {
+  storage.has('playlist', function (error, hasKey) {
+    if (hasKey == false) {
+      didSelectPlaylist(firstPlaylist)
+    }
+  });
+}
+
+function reloadMeInfo(completion) {
+  spotifyApi.getMe()
+      .then(function(data) {
+        console.log('Some information about the authenticated user', data.body);
+        storage.set('user_info', { user_id: data.body.id, user_name: data.body.display_name }, function (error) {
+          if (error) throw error;
+          completion()
+        });
+      }, function(err) {
+        console.log('Something went wrong!', err);
+        if (err.statusCode == 401 || err.statusCode == 403) {
+          loginToSpotify()
+        }
+      });
+}
+
+function didSelectPlaylist(playlist) {
+  console.log('savePlayListId -> ' + playlist.id)
+  console.log('savePlayListuri -> ' + playlist.uri)
+  console.log('playlistUser -> ' + playlist.owner.id)
+
+  storage.set('playlist', {playlist_id: playlist.id, playlist_uri: playlist.uri, playlist_user: playlist.owner.id}, function (error) {
+    if (error) throw error;
+    mainWindow.webContents.send('reload-tracks');
+  });
+}
+
+function checkAccessToken(completion) {
+  storage.has('spotify_token', function (error, hasKey) {
+    if (error) throw error;
+
+    if (hasKey == true) {
+      storage.get('spotify_token', function (error, data) {
+        if (error) throw error;
+        spotifyApi.setAccessToken(data.access_token);
+        completion()
+      });
+    } else {
+      loginToSpotify()
+    }
+  })
+}
+
+function loginToSpotify() {
+  const options = {
+    scope: 'user-read-private playlist-read-private playlist-read-collaborative user-library-read'
+  };
+
+  const windowParams = {
+    alwaysOnTop: true,
+    autoHideMenuBar: true,
+    webPreferences: {
+      nodeIntegration: false
+    }
+  };
+
+  const myApiOauth = electronOauth2(config, windowParams);
+
+  storage.has('spotify_token', function (error, hasKey) {
+    if (error) throw error;
+
+    if (hasKey == true) {
+      storage.get('spotify_token', function (error, data) {
+        if (error) throw error;
+        if (data.refresh_token === undefined) {
+          storage.remove('spotify_token', function (error, data) {
+            loginToSpotify()
+          });
+          return
+        }
+
+        console.log("Try refresh token with : " + data.refresh_token)
+        myApiOauth.refreshToken(data.refresh_token).then(newToken => {
+          console.log("newToken access_token -> " + newToken.access_token);
+        storage.set('spotify_token', { access_token: newToken.access_token, refresh_token: data.refresh_token }, function (error) {
+          if (error) throw error;
+          spotifyApi.setAccessToken(newToken.access_token);
+          reloadMeInfo(function () {
+            loadUserPlaylists()
+            if (mainWindow !== undefined) {
+              mainWindow.webContents.send('reload-tracks');
+            }
+          })
+        });
+      })
+      })
+    } else {
+      myApiOauth.getAccessToken(options).then(token => {
+        console.log("token access_token -> " + token.access_token);
+      console.log("token refresh_token -> " + token.refresh_token);
+
+      storage.set('spotify_token', { access_token: token.access_token, refresh_token: token.refresh_token }, function (error) {
+        if (error) throw error;
+        spotifyApi.setAccessToken(token.access_token);
+        reloadMeInfo(function () {
+          loadUserPlaylists()
+          if (mainWindow !== undefined) {
+            mainWindow.webContents.send('reload-tracks');
+          }
+        })
+      });
+    })
+    }
+  })
+}
+
+// IPC
 
 ipcMain.on('request_oauth_token', function () {
   console.log("request_oauth_token");
   loginToSpotify()
 });
 
-ipcMain.on("playlist-saved", function () {
-  console.log("playlist-saved");
-  mainWindow.webContents.send('reload-tracks');
-})
-
-ipcMain.on("close-settings-window", function () {
-  console.log("close-settings-window");
-  prefsWindow.hide()
-})

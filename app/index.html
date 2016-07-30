@@ -35,6 +35,9 @@
       </div>
     </div>
   </div>
+  <div class="loading" ng-hide="loadingHidden">
+    <img src="img/ring.gif">
+  </div>
   <div class="tracksContainer">
     <div class="row" ng-repeat="track in tracksList.slice(0,12) track by $index" ng-switch on="$index % 3">
         <span ng-switch-when="0">
