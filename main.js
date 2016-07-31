@@ -118,6 +118,7 @@ function setGlobalShortcuts() {
 }
 
 function createMenuWithPlaylists(playlists) {
+
   var template = [{
     label: "Application",
     submenu: [
@@ -142,13 +143,16 @@ function createMenuWithPlaylists(playlists) {
     ]}
   ];
 
-  var playlistsSubmenu = template[2].submenu[1].submenu;
-  playlists.forEach(function(playlist) {
-    playlistsSubmenu.push({ label: playlist.name,type: 'radio', click() { didSelectPlaylist(playlist) }})
-  });
+  obtainCurrentPlaylist(function (selectedPlaylistId) {
+    console.log("selectedPlaylistId -> " + selectedPlaylistId);
+    var playlistsSubmenu = template[2].submenu[1].submenu;
+    playlists.forEach(function(playlist) {
+      playlistsSubmenu.push({ label: playlist.name,type: 'radio', checked: (selectedPlaylistId == playlist.id), click() { didSelectPlaylist(playlist) }})
+    });
 
-  mainMenu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(mainMenu)
+    mainMenu = Menu.buildFromTemplate(template);
+    Menu.setApplicationMenu(mainMenu)
+  })
 }
 
 function loadUserPlaylists() {
@@ -166,7 +170,7 @@ function loadUserPlaylists() {
 
       spotifyApi.getUserPlaylists(userData.user_id)
           .then(function(data) {
-            console.log('Retrieved playlists', data.body);
+            console.log('Retrieved playlists');
             createMenuWithPlaylists(data.body.items)
             createAndShowMainWindow()
             checkAnyPlaylistSelected(data.body.items[0])
@@ -184,6 +188,19 @@ function checkAnyPlaylistSelected(firstPlaylist) {
   storage.has('playlist', function (error, hasKey) {
     if (hasKey == false) {
       didSelectPlaylist(firstPlaylist)
+    }
+  });
+}
+
+function obtainCurrentPlaylist(completion) {
+  storage.has('playlist', function (error, hasKey) {
+    if (hasKey == true) {
+      storage.get('playlist', function (error, playlistData) {
+        if (error) throw error;
+        completion(playlistData.playlist_id)
+      });
+    } else {
+      completion(undefined)
     }
   });
 }
@@ -209,7 +226,7 @@ function didSelectPlaylist(playlist) {
   console.log('savePlayListuri -> ' + playlist.uri)
   console.log('playlistUser -> ' + playlist.owner.id)
 
-  storage.set('playlist', {playlist_id: playlist.id, playlist_uri: playlist.uri, playlist_user: playlist.owner.id}, function (error) {
+  storage.set('playlist', { playlist_id: playlist.id, playlist_uri: playlist.uri, playlist_user: playlist.owner.id }, function (error) {
     if (error) throw error;
     mainWindow.webContents.send('reload-tracks');
   });

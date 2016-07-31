@@ -38,23 +38,47 @@
   <div class="loading" ng-hide="loadingHidden">
     <img src="img/ring.gif">
   </div>
-  <div class="tracksContainer">
+  <div class="tracksContainer container-fluid">
     <div class="row" ng-repeat="track in tracksList.slice(0,12) track by $index" ng-switch on="$index % 3">
         <span ng-switch-when="0">
-            <div class="col-xs-4 text-center trackBox">{{$index + 1}}. {{tracksList[$index].track.name}}<br/><span
-                    class="innerTrackBox">{{tracksList[$index].track.album.name}}</span><br/>{{tracksList[$index].track.artists[0].name}}</div>
-            <div class="col-xs-4 text-center trackBox">{{$index + 2}}. {{tracksList[$index+1].track.name}}<br/><span
-                    class="innerTrackBox">{{tracksList[$index+1].track.album.name}}</span><br/>{{tracksList[$index+1].track.artists[0].name}}</div>
-            <div class="col-xs-4 text-center trackBox">{{$index + 3}}. {{tracksList[$index+2].track.name}}<br/><span
-                    class="innerTrackBox">{{tracksList[$index+2].track.album.name}}</span><br/>{{tracksList[$index+2].track.artists[0].name}}</div>
+            <div class="col-xs-4 trackBox">
+              <span class="trackIndex">{{$index + 1}}</span>
+              <span class="trackInfo">
+                <table class="trackInfoTable">
+                  <tr><td>{{tracksList[$index].track.name}}</td></tr>
+                  <tr><td><span class="innerTrackBox">{{tracksList[$index].track.album.name}}</span></td></tr>
+                  <tr><td>{{tracksList[$index].track.artists[0].name}}</td></tr>
+                </table>
+              </span>
+            </div>
+          <div class="col-xs-4 trackBox">
+              <span class="trackIndex">{{$index + 2}}</span>
+              <span class="trackInfo">
+                <table class="trackInfoTable">
+                  <tr><td>{{tracksList[$index + 2].track.name}}</td></tr>
+                  <tr><td><span class="innerTrackBox">{{tracksList[$index + 2].track.album.name}}</span></td></tr>
+                  <tr><td>{{tracksList[$index + 2].track.artists[0].name}}</td></tr>
+                </table>
+              </span>
+            </div>
+
+          <div class="col-xs-4 trackBox">
+              <span class="trackIndex">{{$index + 3}}</span>
+              <span class="trackInfo">
+                <table class="trackInfoTable">
+                  <tr><td>{{tracksList[$index + 3].track.name}}</td></tr>
+                  <tr><td><span class="innerTrackBox">{{tracksList[$index + 3].track.album.name}}</span></td></tr>
+                  <tr><td>{{tracksList[$index + 3].track.artists[0].name}}</td></tr>
+                </table>
+              </span>
+            </div>
         </span>
     </div>
   </div>
   <div class="row bottomBoxesContainer">
-    <div class="col-xs-4 text-center bottomBox">
-      <h4>SELECTION</h4>
+    <div class="col-xs-4 bottomBox">
       <div class="row">
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-12">
           <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 1}" ng-click="addTrackToUpcoming(1)">1</button>
           <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 2}" ng-click="addTrackToUpcoming(2)">2</button>
           <button type="button" class="btn buttonPurple" ng-class="{'selected': selectedButtonIndex == 3}" ng-click="addTrackToUpcoming(3)">3</button>
@@ -65,7 +89,7 @@
       </div>
       <br/>
       <div class="row">
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-12">
           <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 7}" ng-click="addTrackToUpcoming(7)">7</button>
           <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 8}" ng-click="addTrackToUpcoming(8)">8</button>
           <button type="button" class="btn buttonPurple move" ng-class="{'selected': selectedButtonIndex == 9}" ng-click="addTrackToUpcoming(9)">9</button>
@@ -76,17 +100,17 @@
       </div>
       <br/>
       <div class="row">
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-12">
           <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 13}" ng-click="loadPreviousPage()">PREV</button>
           <button type="button" class="btn buttonPurple buttonPurpleLarge" ng-class="{'selected': selectedButtonIndex == 14}" ng-click="loadNextPage()">NEXT</button>
         </div>
       </div>
     </div>
-    <div class="col-xs-2 col-md-offset-1 text-center bottomBox">
+    <div class="col-xs-2 col-md-offset-1 bottomBox">
       <h4>CREDITS</h4>
       <div class="creditsLabel">{{credits}}</div>
     </div>
-    <div class="col-xs-3 col-md-offset-1 text-center bottomBox">
+    <div class="col-xs-3 col-md-offset-1 bottomBox">
       <h4>INSTRUCTIONS</h4>
       1) Insert coins <br/>
       2) Select a track <br/>
