@@ -40,12 +40,12 @@ app.controller('mainController', function ($scope) {
     };
 
     $scope.loadPreviousPage = function () {
-        playSound('collect');
+        playSound('button-17');
         loadTracks($scope.currentPage - 1)
     };
 
     $scope.loadNextPage = function () {
-        playSound('collect');
+        playSound('button-17');
         loadTracks($scope.currentPage + 1)
     };
 
@@ -70,6 +70,7 @@ app.controller('mainController', function ($scope) {
 
     ipcRenderer.on('click-arrow', function (event, direction) {
         console.log("click arrow -> " + direction);
+        playSound('button-09');
         switch (direction) {
             case 'Right':
                 moveCursorRight();
@@ -136,6 +137,7 @@ app.controller('mainController', function ($scope) {
     }
 
     function doLoadTracksForCurrentPlaylist(offset) {
+        console.log("Load tracks...");
         var playlistData = $scope.playList;
 
         if (playlistData === undefined) {
@@ -150,7 +152,6 @@ app.controller('mainController', function ($scope) {
             'offset': offset * 11, 'limit': 12
         })
             .then(function (data) {
-                playSound('bonus');
                 didLoadedTracks(data.body.items);
                 $scope.currentPage = offset
                 $scope.$apply();
@@ -499,6 +500,7 @@ app.controller('mainController', function ($scope) {
             if (hasKey == true) {
                 storage.get('spotify_token', function (error, data) {
                     if (error) throw error;
+                    console.log("Saved token!")
                     spotifyApi.setAccessToken(data.access_token);
                     completion()
                 });
@@ -511,6 +513,7 @@ app.controller('mainController', function ($scope) {
     // START HERE
 
     spotifyPlayer.player.on('ready', function () {
+        console.log("Spotify ready")
         savePlayListInScope(function () {
             loadTracks($scope.currentPage)
             spotifyPlayer.player.play()
