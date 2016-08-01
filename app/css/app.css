@@ -139,7 +139,11 @@ body {
     text-align: center;
     display:flex;
     align-items:center;
-    background-color:#d58512;
+    background-color:transparent;
+    background-image: url('../img/arrow_index_back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .trackInfo {

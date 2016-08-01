@@ -1,9 +1,10 @@
 {
-  "name": "angular-seed",
+  "name": "SpotifyJukebox",
+  "productName": "Spotify Jukebox",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.0.1",
+  "description": "A Jukebox for Spotify",
+  "repository": "https://bitbucket.org/javikr/jukeboxspotify",
   "license": "MIT",
   "main": "main.js",
   "devDependencies": {

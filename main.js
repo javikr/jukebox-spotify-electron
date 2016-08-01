@@ -46,7 +46,7 @@ function createAndShowMainWindow() {
     width: 1024,
     height: 768,
     resizable: true,
-    title: "Jukebox",
+    title: "Spotify Jukebox",
     show: false,
     maximizable: true
   });
@@ -127,15 +127,6 @@ function createMenuWithPlaylists(playlists) {
       { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
       { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
     ]}, {
-    label: "Edit",
-    submenu: [
-      { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
-      { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
-      { type: "separator" },
-      { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
-      { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
-      { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" }
-    ]}, {
     label: "Spotify",
     submenu: [
       { label: 'Logout', click() { mainWindow.webContents.send('logout'); } },
@@ -145,7 +136,7 @@ function createMenuWithPlaylists(playlists) {
 
   obtainCurrentPlaylist(function (selectedPlaylistId) {
     console.log("selectedPlaylistId -> " + selectedPlaylistId);
-    var playlistsSubmenu = template[2].submenu[1].submenu;
+    var playlistsSubmenu = template[1].submenu[1].submenu;
     playlists.forEach(function(playlist) {
       playlistsSubmenu.push({ label: playlist.name,type: 'radio', checked: (selectedPlaylistId == playlist.id), click() { didSelectPlaylist(playlist) }})
     });

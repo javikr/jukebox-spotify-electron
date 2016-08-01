@@ -42,7 +42,7 @@
     <div class="row" ng-repeat="track in tracksList.slice(0,12) track by $index" ng-switch on="$index % 3">
         <span ng-switch-when="0">
             <div class="col-xs-4 trackBox">
-              <span class="trackIndex">{{$index}}</span>
+              <span class="trackIndex">{{$index + 1}}</span>
               <span class="trackInfo">
                 <table class="trackInfoTable">
                   <tr><td>{{tracksList[$index].track.name}}</td></tr>
@@ -52,7 +52,7 @@
               </span>
             </div>
           <div class="col-xs-4 trackBox">
-              <span class="trackIndex">{{$index + 1}}</span>
+              <span class="trackIndex">{{$index + 2}}</span>
               <span class="trackInfo">
                 <table class="trackInfoTable">
                   <tr><td>{{tracksList[$index + 1].track.name}}</td></tr>
@@ -63,7 +63,7 @@
             </div>
 
           <div class="col-xs-4 trackBox">
-              <span class="trackIndex">{{$index + 2}}</span>
+              <span class="trackIndex">{{$index + 3}}</span>
               <span class="trackInfo">
                 <table class="trackInfoTable">
                   <tr><td>{{tracksList[$index + 2].track.name}}</td></tr>

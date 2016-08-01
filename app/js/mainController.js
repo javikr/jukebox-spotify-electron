@@ -39,16 +39,6 @@ app.controller('mainController', function ($scope) {
         manageAddTrackToUpcomingList(trackIndex);
     };
 
-    $scope.loadPreviousPage = function () {
-        playSound('button-17');
-        loadTracks($scope.currentPage - 1)
-    };
-
-    $scope.loadNextPage = function () {
-        playSound('button-17');
-        loadTracks($scope.currentPage + 1)
-    };
-
     $scope.comingUp = function () {
         return $scope.upcomingTrackList.length;
     };
@@ -70,7 +60,7 @@ app.controller('mainController', function ($scope) {
 
     ipcRenderer.on('click-arrow', function (event, direction) {
         console.log("click arrow -> " + direction);
-        playSound('button-09');
+        playSound('button-16');
         switch (direction) {
             case 'Right':
                 moveCursorRight();
@@ -88,7 +78,7 @@ app.controller('mainController', function ($scope) {
     });
 
     ipcRenderer.on('click-enter', function () {
-        mamageClickEnter()
+        manageClickEnter()
     });
 
     ipcRenderer.on('reload-tracks', function () {
@@ -112,11 +102,10 @@ app.controller('mainController', function ($scope) {
 
         var trackInfo = $scope.tracksList[trackIndex - 1]
         $scope.upcomingTrackList.push(trackInfo);
-
-        playSound('collect');
     }
 
     function playSound(soundName) {
+        console.log("play sound -> " + soundName)
         var audio = new Audio(__dirname + '/sounds/' + soundName + '.wav');
         audio.currentTime = 0;
         audio.play();
@@ -277,197 +266,85 @@ app.controller('mainController', function ($scope) {
 
     function moveCursorRight() {
         switch ($scope.selectedButtonIndex) {
-            case 1:
-                $scope.selectedButtonIndex = 2;
-                break;
-            case 2:
-                $scope.selectedButtonIndex = 3;
-                break;
-            case 3:
-                $scope.selectedButtonIndex = 4;
-                break;
-            case 4:
-                $scope.selectedButtonIndex = 5;
-                break;
-            case 5:
-                $scope.selectedButtonIndex = 6;
-                break;
-            case 6:
-                $scope.selectedButtonIndex = 6;
-                break;
-            case 7:
-                $scope.selectedButtonIndex = 8;
-                break;
-            case 8:
-                $scope.selectedButtonIndex = 9;
-                break;
-            case 9:
-                $scope.selectedButtonIndex = 10;
-                break;
-            case 10:
-                $scope.selectedButtonIndex = 11;
-                break;
-            case 11:
-                $scope.selectedButtonIndex = 12;
-                break;
-            case 12:
-                $scope.selectedButtonIndex = 12;
-                break;
-            case 13:
-                $scope.selectedButtonIndex = 14;
-                break;
-            case 14:
-                $scope.selectedButtonIndex = 14;
-                break;
+            case 1: $scope.selectedButtonIndex = 2; break;
+            case 2: $scope.selectedButtonIndex = 3; break;
+            case 3: $scope.selectedButtonIndex = 4; break;
+            case 4: $scope.selectedButtonIndex = 5; break;
+            case 5: $scope.selectedButtonIndex = 6; break;
+            case 6: $scope.selectedButtonIndex = 6; break;
+            case 7: $scope.selectedButtonIndex = 8; break;
+            case 8: $scope.selectedButtonIndex = 9; break;
+            case 9: $scope.selectedButtonIndex = 10; break;
+            case 10: $scope.selectedButtonIndex = 11; break;
+            case 11: $scope.selectedButtonIndex = 12; break;
+            case 12: $scope.selectedButtonIndex = 12; break;
+            case 13: $scope.selectedButtonIndex = 14; break;
+            case 14: $scope.selectedButtonIndex = 14; break;
         }
         $scope.$apply();
     }
 
     function moveCursorLeft() {
         switch ($scope.selectedButtonIndex) {
-            case 1:
-                $scope.selectedButtonIndex = 1;
-                break;
-            case 2:
-                $scope.selectedButtonIndex = 1;
-                break;
-            case 3:
-                $scope.selectedButtonIndex = 2;
-                break;
-            case 4:
-                $scope.selectedButtonIndex = 3;
-                break;
-            case 5:
-                $scope.selectedButtonIndex = 4;
-                break;
-            case 6:
-                $scope.selectedButtonIndex = 5;
-                break;
-            case 7:
-                $scope.selectedButtonIndex = 7;
-                break;
-            case 8:
-                $scope.selectedButtonIndex = 7;
-                break;
-            case 9:
-                $scope.selectedButtonIndex = 8;
-                break;
-            case 10:
-                $scope.selectedButtonIndex = 9;
-                break;
-            case 11:
-                $scope.selectedButtonIndex = 10;
-                break;
-            case 12:
-                $scope.selectedButtonIndex = 11;
-                break;
-            case 13:
-                $scope.selectedButtonIndex = 13;
-                break;
-            case 14:
-                $scope.selectedButtonIndex = 13;
-                break;
+            case 1: $scope.selectedButtonIndex = 1; break;
+            case 2: $scope.selectedButtonIndex = 1; break;
+            case 3: $scope.selectedButtonIndex = 2; break;
+            case 4: $scope.selectedButtonIndex = 3; break;
+            case 5: $scope.selectedButtonIndex = 4; break;
+            case 6: $scope.selectedButtonIndex = 5; break;
+            case 7: $scope.selectedButtonIndex = 7; break;
+            case 8: $scope.selectedButtonIndex = 7; break;
+            case 9: $scope.selectedButtonIndex = 8; break;
+            case 10: $scope.selectedButtonIndex = 9; break;
+            case 11: $scope.selectedButtonIndex = 10; break;
+            case 12: $scope.selectedButtonIndex = 11; break;
+            case 13: $scope.selectedButtonIndex = 13; break;
+            case 14: $scope.selectedButtonIndex = 13; break;
         }
         $scope.$apply();
     }
 
     function moveCursorUp() {
         switch ($scope.selectedButtonIndex) {
-            case 1:
-                $scope.selectedButtonIndex = 1;
-                break;
-            case 2:
-                $scope.selectedButtonIndex = 2;
-                break;
-            case 3:
-                $scope.selectedButtonIndex = 3;
-                break;
-            case 4:
-                $scope.selectedButtonIndex = 4;
-                break;
-            case 5:
-                $scope.selectedButtonIndex = 5;
-                break;
-            case 6:
-                $scope.selectedButtonIndex = 6;
-                break;
-            case 7:
-                $scope.selectedButtonIndex = 1;
-                break;
-            case 8:
-                $scope.selectedButtonIndex = 2;
-                break;
-            case 9:
-                $scope.selectedButtonIndex = 3;
-                break;
-            case 10:
-                $scope.selectedButtonIndex = 4;
-                break;
-            case 11:
-                $scope.selectedButtonIndex = 5;
-                break;
-            case 12:
-                $scope.selectedButtonIndex = 6;
-                break;
-            case 13:
-                $scope.selectedButtonIndex = 8;
-                break;
-            case 14:
-                $scope.selectedButtonIndex = 11;
-                break;
+            case 1: $scope.selectedButtonIndex = 1; break;
+            case 2: $scope.selectedButtonIndex = 2; break;
+            case 3: $scope.selectedButtonIndex = 3; break;
+            case 4: $scope.selectedButtonIndex = 4; break;
+            case 5: $scope.selectedButtonIndex = 5; break;
+            case 6: $scope.selectedButtonIndex = 6; break;
+            case 7: $scope.selectedButtonIndex = 1; break;
+            case 8: $scope.selectedButtonIndex = 2; break;
+            case 9: $scope.selectedButtonIndex = 3; break;
+            case 10: $scope.selectedButtonIndex = 4; break;
+            case 11: $scope.selectedButtonIndex = 5; break;
+            case 12: $scope.selectedButtonIndex = 6; break;
+            case 13: $scope.selectedButtonIndex = 8; break;
+            case 14: $scope.selectedButtonIndex = 11; break;
         }
         $scope.$apply();
     }
 
     function moveCursorDown() {
         switch ($scope.selectedButtonIndex) {
-            case 1:
-                $scope.selectedButtonIndex = 7;
-                break;
-            case 2:
-                $scope.selectedButtonIndex = 8;
-                break;
-            case 3:
-                $scope.selectedButtonIndex = 9;
-                break;
-            case 4:
-                $scope.selectedButtonIndex = 10;
-                break;
-            case 5:
-                $scope.selectedButtonIndex = 11;
-                break;
-            case 6:
-                $scope.selectedButtonIndex = 12;
-                break;
-            case 7:
-                $scope.selectedButtonIndex = 13;
-                break;
-            case 8:
-                $scope.selectedButtonIndex = 13;
-                break;
-            case 9:
-                $scope.selectedButtonIndex = 13;
-                break;
-            case 10:
-                $scope.selectedButtonIndex = 14;
-                break;
-            case 11:
-                $scope.selectedButtonIndex = 14;
-                break;
-            case 12:
-                $scope.selectedButtonIndex = 14;
-                break;
-            case 13:
-                $scope.selectedButtonIndex = 13;
-                break;
-            case 14:
-                $scope.selectedButtonIndex = 14;
-                break;
+            case 1: $scope.selectedButtonIndex = 7; break;
+            case 2: $scope.selectedButtonIndex = 8; break;
+            case 3: $scope.selectedButtonIndex = 9; break;
+            case 4: $scope.selectedButtonIndex = 10; break;
+            case 5: $scope.selectedButtonIndex = 11; break;
+            case 6: $scope.selectedButtonIndex = 12; break;
+            case 7: $scope.selectedButtonIndex = 13; break;
+            case 8: $scope.selectedButtonIndex = 13; break;
+            case 9: $scope.selectedButtonIndex = 13; break;
+            case 10: $scope.selectedButtonIndex = 14; break;
+            case 11: $scope.selectedButtonIndex = 14; break;
+            case 12: $scope.selectedButtonIndex = 14; break;
+            case 13: $scope.selectedButtonIndex = 13; break;
+            case 14: $scope.selectedButtonIndex = 14; break;
         }
         $scope.$apply();
     }
 
-    function mamageClickEnter() {
+    function manageClickEnter() {
         console.log("click enter");
         switch ($scope.selectedButtonIndex) {
             case 1:
@@ -482,12 +359,15 @@ app.controller('mainController', function ($scope) {
             case 10:
             case 11:
             case 12:
+                playSound('button-09');
                 manageAddTrackToUpcomingList($scope.selectedButtonIndex);
                 break;
             case 13:
+                playSound('button-17');
                 loadTracks($scope.currentPage - 1);
                 break;
             case 14:
+                playSound('button-17');
                 loadTracks($scope.currentPage + 1);
                 break;
         }
