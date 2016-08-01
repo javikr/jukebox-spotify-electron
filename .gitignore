@@ -21,3 +21,782 @@ app/bower_components
 *.pyc
 debug.log
 npm-debug.lognode_modules
+npm-debug.log
+Spotify Jukebox-darwin-x64/LICENSE
+Spotify Jukebox-darwin-x64/LICENSES.chromium.html
+Spotify Jukebox-darwin-x64/version
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/PkgInfo
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Electron Framework
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Libraries
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Resources
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/Current
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libnode.dylib
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/content_shell.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/crashpad_handler
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/MainMenu.nib
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/natives_blob.bin
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/snapshot_blob.bin
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Headers
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Mantle
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Modules
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Resources
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/Current
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/Mantle.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLJSONAdapter.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLManagedObjectAdapter.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel+NSCoding.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLValueTransformer.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSArray+MTLManipulationAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSDictionary+MTLManipulationAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSObject+MTLComparisonAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLInversionAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLPredefinedTransformerAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Modules/module.modulemap
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Mantle.framework/Versions/A/Resources/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Headers
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Modules
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/ReactiveCocoa
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Resources
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/Current
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/ReactiveCocoa
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTKeyPathCoding.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTScope.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/metamacros.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSArray+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACCommandSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACTextSignalSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSData+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSDictionary+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSEnumerator+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSFileHandle+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSIndexSet+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSNotificationCenter+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACAppKitBindings.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACDeallocating.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACLifting.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACPropertySubscribing.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACSelectorSignal.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSOrderedSet+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSSet+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSequenceAdditions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSText+RACSignalSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSURLConnection+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSUserDefaults+RACSupport.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBacktrace.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBehaviorSubject.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACChannel.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCommand.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCompoundDisposable.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACDisposable.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACEvent.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACGroupedSignal.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACKVOChannel.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACMulticastConnection.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler+Subclass.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACReplaySubject.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler+Subclass.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScopedDisposable.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSequence.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSerialDisposable.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal+Operations.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACStream.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubject.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriber.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriptingAssignmentTrampoline.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTargetQueueScheduler.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTestScheduler.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTuple.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACUnit.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/ReactiveCocoa.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Modules/module.modulemap
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Resources/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/PkgInfo
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/MacOS/Spotify Jukebox Helper EH
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/PkgInfo
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/MacOS/Spotify Jukebox Helper NP
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/PkgInfo
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/MacOS/Spotify Jukebox Helper
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Headers
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Modules
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Resources
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Squirrel
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/Current
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSBundle+SQRLVersionExtensions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSProcessInfo+SQRLVersionExtensions.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLDownloadedUpdate.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdate.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdater.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/Squirrel.h
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Modules/module.modulemap
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/MacOS/Spotify Jukebox
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/electron.asar
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/electron.icns
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/.bowerrc
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/.gitignore
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/.travis.yml
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/bower.json
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/contributors.txt
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/LICENSE
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/LICENSE.md
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/main.js
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/package.json
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/README.md
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/index-async.html
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/index.html
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/index.js
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/npm-debug.log
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/css/.gitkeep
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/css/app.css
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/.gitkeep
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/background_stars.png
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/background_white.jpg
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/btn_background.png
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/ring.gif
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/js/mainController.js
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/partials/.gitkeep
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/bonus.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-09.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-16.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-17.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/coin.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/collect.wav
+Spotify Jukebox-darwin-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/poush.wav
+Spotify Jukebox-linux-ia32/content_shell.pak
+Spotify Jukebox-linux-ia32/icudtl.dat
+Spotify Jukebox-linux-ia32/libffmpeg.so
+Spotify Jukebox-linux-ia32/libnode.so
+Spotify Jukebox-linux-ia32/LICENSE
+Spotify Jukebox-linux-ia32/LICENSES.chromium.html
+Spotify Jukebox-linux-ia32/natives_blob.bin
+Spotify Jukebox-linux-ia32/snapshot_blob.bin
+Spotify Jukebox-linux-ia32/Spotify Jukebox
+Spotify Jukebox-linux-ia32/version
+Spotify Jukebox-linux-ia32/locales/am.pak
+Spotify Jukebox-linux-ia32/locales/ar.pak
+Spotify Jukebox-linux-ia32/locales/bg.pak
+Spotify Jukebox-linux-ia32/locales/bn.pak
+Spotify Jukebox-linux-ia32/locales/ca.pak
+Spotify Jukebox-linux-ia32/locales/cs.pak
+Spotify Jukebox-linux-ia32/locales/da.pak
+Spotify Jukebox-linux-ia32/locales/de.pak
+Spotify Jukebox-linux-ia32/locales/el.pak
+Spotify Jukebox-linux-ia32/locales/en-GB.pak
+Spotify Jukebox-linux-ia32/locales/en-US.pak
+Spotify Jukebox-linux-ia32/locales/es-419.pak
+Spotify Jukebox-linux-ia32/locales/es.pak
+Spotify Jukebox-linux-ia32/locales/et.pak
+Spotify Jukebox-linux-ia32/locales/fa.pak
+Spotify Jukebox-linux-ia32/locales/fake-bidi.pak
+Spotify Jukebox-linux-ia32/locales/fi.pak
+Spotify Jukebox-linux-ia32/locales/fil.pak
+Spotify Jukebox-linux-ia32/locales/fr.pak
+Spotify Jukebox-linux-ia32/locales/gu.pak
+Spotify Jukebox-linux-ia32/locales/he.pak
+Spotify Jukebox-linux-ia32/locales/hi.pak
+Spotify Jukebox-linux-ia32/locales/hr.pak
+Spotify Jukebox-linux-ia32/locales/hu.pak
+Spotify Jukebox-linux-ia32/locales/id.pak
+Spotify Jukebox-linux-ia32/locales/it.pak
+Spotify Jukebox-linux-ia32/locales/ja.pak
+Spotify Jukebox-linux-ia32/locales/kn.pak
+Spotify Jukebox-linux-ia32/locales/ko.pak
+Spotify Jukebox-linux-ia32/locales/lt.pak
+Spotify Jukebox-linux-ia32/locales/lv.pak
+Spotify Jukebox-linux-ia32/locales/ml.pak
+Spotify Jukebox-linux-ia32/locales/mr.pak
+Spotify Jukebox-linux-ia32/locales/ms.pak
+Spotify Jukebox-linux-ia32/locales/nb.pak
+Spotify Jukebox-linux-ia32/locales/nl.pak
+Spotify Jukebox-linux-ia32/locales/pl.pak
+Spotify Jukebox-linux-ia32/locales/pt-BR.pak
+Spotify Jukebox-linux-ia32/locales/pt-PT.pak
+Spotify Jukebox-linux-ia32/locales/ro.pak
+Spotify Jukebox-linux-ia32/locales/ru.pak
+Spotify Jukebox-linux-ia32/locales/sk.pak
+Spotify Jukebox-linux-ia32/locales/sl.pak
+Spotify Jukebox-linux-ia32/locales/sr.pak
+Spotify Jukebox-linux-ia32/locales/sv.pak
+Spotify Jukebox-linux-ia32/locales/sw.pak
+Spotify Jukebox-linux-ia32/locales/ta.pak
+Spotify Jukebox-linux-ia32/locales/te.pak
+Spotify Jukebox-linux-ia32/locales/th.pak
+Spotify Jukebox-linux-ia32/locales/tr.pak
+Spotify Jukebox-linux-ia32/locales/uk.pak
+Spotify Jukebox-linux-ia32/locales/vi.pak
+Spotify Jukebox-linux-ia32/locales/zh-CN.pak
+Spotify Jukebox-linux-ia32/locales/zh-TW.pak
+Spotify Jukebox-linux-ia32/resources/electron.asar
+Spotify Jukebox-linux-ia32/resources/app/.bowerrc
+Spotify Jukebox-linux-ia32/resources/app/.gitignore
+Spotify Jukebox-linux-ia32/resources/app/.travis.yml
+Spotify Jukebox-linux-ia32/resources/app/bower.json
+Spotify Jukebox-linux-ia32/resources/app/contributors.txt
+Spotify Jukebox-linux-ia32/resources/app/LICENSE
+Spotify Jukebox-linux-ia32/resources/app/LICENSE.md
+Spotify Jukebox-linux-ia32/resources/app/main.js
+Spotify Jukebox-linux-ia32/resources/app/package.json
+Spotify Jukebox-linux-ia32/resources/app/README.md
+Spotify Jukebox-linux-ia32/resources/app/app/index-async.html
+Spotify Jukebox-linux-ia32/resources/app/app/index.html
+Spotify Jukebox-linux-ia32/resources/app/app/index.js
+Spotify Jukebox-linux-ia32/resources/app/app/npm-debug.log
+Spotify Jukebox-linux-ia32/resources/app/app/css/.gitkeep
+Spotify Jukebox-linux-ia32/resources/app/app/css/app.css
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-linux-ia32/resources/app/app/img/.gitkeep
+Spotify Jukebox-linux-ia32/resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-linux-ia32/resources/app/app/img/background_stars.png
+Spotify Jukebox-linux-ia32/resources/app/app/img/background_white.jpg
+Spotify Jukebox-linux-ia32/resources/app/app/img/btn_background.png
+Spotify Jukebox-linux-ia32/resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-linux-ia32/resources/app/app/img/ring.gif
+Spotify Jukebox-linux-ia32/resources/app/app/js/mainController.js
+Spotify Jukebox-linux-ia32/resources/app/app/partials/.gitkeep
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/bonus.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/button-09.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/button-16.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/button-17.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/coin.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/collect.wav
+Spotify Jukebox-linux-ia32/resources/app/app/sounds/poush.wav
+Spotify Jukebox-linux-x64/content_shell.pak
+Spotify Jukebox-linux-x64/icudtl.dat
+Spotify Jukebox-linux-x64/libffmpeg.so
+Spotify Jukebox-linux-x64/libnode.so
+Spotify Jukebox-linux-x64/LICENSE
+Spotify Jukebox-linux-x64/LICENSES.chromium.html
+Spotify Jukebox-linux-x64/natives_blob.bin
+Spotify Jukebox-linux-x64/snapshot_blob.bin
+Spotify Jukebox-linux-x64/Spotify Jukebox
+Spotify Jukebox-linux-x64/version
+Spotify Jukebox-linux-x64/locales/am.pak
+Spotify Jukebox-linux-x64/locales/ar.pak
+Spotify Jukebox-linux-x64/locales/bg.pak
+Spotify Jukebox-linux-x64/locales/bn.pak
+Spotify Jukebox-linux-x64/locales/ca.pak
+Spotify Jukebox-linux-x64/locales/cs.pak
+Spotify Jukebox-linux-x64/locales/da.pak
+Spotify Jukebox-linux-x64/locales/de.pak
+Spotify Jukebox-linux-x64/locales/el.pak
+Spotify Jukebox-linux-x64/locales/en-GB.pak
+Spotify Jukebox-linux-x64/locales/en-US.pak
+Spotify Jukebox-linux-x64/locales/es-419.pak
+Spotify Jukebox-linux-x64/locales/es.pak
+Spotify Jukebox-linux-x64/locales/et.pak
+Spotify Jukebox-linux-x64/locales/fa.pak
+Spotify Jukebox-linux-x64/locales/fake-bidi.pak
+Spotify Jukebox-linux-x64/locales/fi.pak
+Spotify Jukebox-linux-x64/locales/fil.pak
+Spotify Jukebox-linux-x64/locales/fr.pak
+Spotify Jukebox-linux-x64/locales/gu.pak
+Spotify Jukebox-linux-x64/locales/he.pak
+Spotify Jukebox-linux-x64/locales/hi.pak
+Spotify Jukebox-linux-x64/locales/hr.pak
+Spotify Jukebox-linux-x64/locales/hu.pak
+Spotify Jukebox-linux-x64/locales/id.pak
+Spotify Jukebox-linux-x64/locales/it.pak
+Spotify Jukebox-linux-x64/locales/ja.pak
+Spotify Jukebox-linux-x64/locales/kn.pak
+Spotify Jukebox-linux-x64/locales/ko.pak
+Spotify Jukebox-linux-x64/locales/lt.pak
+Spotify Jukebox-linux-x64/locales/lv.pak
+Spotify Jukebox-linux-x64/locales/ml.pak
+Spotify Jukebox-linux-x64/locales/mr.pak
+Spotify Jukebox-linux-x64/locales/ms.pak
+Spotify Jukebox-linux-x64/locales/nb.pak
+Spotify Jukebox-linux-x64/locales/nl.pak
+Spotify Jukebox-linux-x64/locales/pl.pak
+Spotify Jukebox-linux-x64/locales/pt-BR.pak
+Spotify Jukebox-linux-x64/locales/pt-PT.pak
+Spotify Jukebox-linux-x64/locales/ro.pak
+Spotify Jukebox-linux-x64/locales/ru.pak
+Spotify Jukebox-linux-x64/locales/sk.pak
+Spotify Jukebox-linux-x64/locales/sl.pak
+Spotify Jukebox-linux-x64/locales/sr.pak
+Spotify Jukebox-linux-x64/locales/sv.pak
+Spotify Jukebox-linux-x64/locales/sw.pak
+Spotify Jukebox-linux-x64/locales/ta.pak
+Spotify Jukebox-linux-x64/locales/te.pak
+Spotify Jukebox-linux-x64/locales/th.pak
+Spotify Jukebox-linux-x64/locales/tr.pak
+Spotify Jukebox-linux-x64/locales/uk.pak
+Spotify Jukebox-linux-x64/locales/vi.pak
+Spotify Jukebox-linux-x64/locales/zh-CN.pak
+Spotify Jukebox-linux-x64/locales/zh-TW.pak
+Spotify Jukebox-linux-x64/resources/electron.asar
+Spotify Jukebox-linux-x64/resources/app/.bowerrc
+Spotify Jukebox-linux-x64/resources/app/.gitignore
+Spotify Jukebox-linux-x64/resources/app/.travis.yml
+Spotify Jukebox-linux-x64/resources/app/bower.json
+Spotify Jukebox-linux-x64/resources/app/contributors.txt
+Spotify Jukebox-linux-x64/resources/app/LICENSE
+Spotify Jukebox-linux-x64/resources/app/LICENSE.md
+Spotify Jukebox-linux-x64/resources/app/main.js
+Spotify Jukebox-linux-x64/resources/app/package.json
+Spotify Jukebox-linux-x64/resources/app/README.md
+Spotify Jukebox-linux-x64/resources/app/app/index-async.html
+Spotify Jukebox-linux-x64/resources/app/app/index.html
+Spotify Jukebox-linux-x64/resources/app/app/index.js
+Spotify Jukebox-linux-x64/resources/app/app/npm-debug.log
+Spotify Jukebox-linux-x64/resources/app/app/css/.gitkeep
+Spotify Jukebox-linux-x64/resources/app/app/css/app.css
+Spotify Jukebox-linux-x64/resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-linux-x64/resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-linux-x64/resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-linux-x64/resources/app/app/img/.gitkeep
+Spotify Jukebox-linux-x64/resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-linux-x64/resources/app/app/img/background_stars.png
+Spotify Jukebox-linux-x64/resources/app/app/img/background_white.jpg
+Spotify Jukebox-linux-x64/resources/app/app/img/btn_background.png
+Spotify Jukebox-linux-x64/resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-linux-x64/resources/app/app/img/ring.gif
+Spotify Jukebox-linux-x64/resources/app/app/js/mainController.js
+Spotify Jukebox-linux-x64/resources/app/app/partials/.gitkeep
+Spotify Jukebox-linux-x64/resources/app/app/sounds/bonus.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/button-09.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/button-16.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/button-17.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/coin.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/collect.wav
+Spotify Jukebox-linux-x64/resources/app/app/sounds/poush.wav
+Spotify Jukebox-mas-x64/LICENSE
+Spotify Jukebox-mas-x64/LICENSES.chromium.html
+Spotify Jukebox-mas-x64/version
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Info.plist
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/PkgInfo
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Electron Framework
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Libraries
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Resources
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/Current
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libnode.dylib
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/content_shell.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/MainMenu.nib
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/natives_blob.bin
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/snapshot_blob.bin
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/Info.plist
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/PkgInfo
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper EH.app/Contents/MacOS/Spotify Jukebox Helper EH
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/Info.plist
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/PkgInfo
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper NP.app/Contents/MacOS/Spotify Jukebox Helper NP
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/Info.plist
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/PkgInfo
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Frameworks/Spotify Jukebox Helper.app/Contents/MacOS/Spotify Jukebox Helper
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/MacOS/Spotify Jukebox
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/electron.asar
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/electron.icns
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/.bowerrc
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/.gitignore
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/.travis.yml
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/bower.json
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/contributors.txt
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/LICENSE
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/LICENSE.md
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/main.js
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/package.json
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/README.md
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/index-async.html
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/index.html
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/index.js
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/npm-debug.log
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/css/.gitkeep
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/css/app.css
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/.gitkeep
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/background_stars.png
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/background_white.jpg
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/btn_background.png
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/img/ring.gif
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/js/mainController.js
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/partials/.gitkeep
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/bonus.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-09.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-16.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/button-17.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/coin.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/collect.wav
+Spotify Jukebox-mas-x64/Spotify Jukebox.app/Contents/Resources/app/app/sounds/poush.wav
+Spotify Jukebox-win32-ia32/blink_image_resources_200_percent.pak
+Spotify Jukebox-win32-ia32/content_resources_200_percent.pak
+Spotify Jukebox-win32-ia32/content_shell.pak
+Spotify Jukebox-win32-ia32/d3dcompiler_47.dll
+Spotify Jukebox-win32-ia32/ffmpeg.dll
+Spotify Jukebox-win32-ia32/icudtl.dat
+Spotify Jukebox-win32-ia32/libEGL.dll
+Spotify Jukebox-win32-ia32/libGLESv2.dll
+Spotify Jukebox-win32-ia32/LICENSE
+Spotify Jukebox-win32-ia32/LICENSES.chromium.html
+Spotify Jukebox-win32-ia32/natives_blob.bin
+Spotify Jukebox-win32-ia32/node.dll
+Spotify Jukebox-win32-ia32/snapshot_blob.bin
+Spotify Jukebox-win32-ia32/Spotify Jukebox.exe
+Spotify Jukebox-win32-ia32/ui_resources_200_percent.pak
+Spotify Jukebox-win32-ia32/version
+Spotify Jukebox-win32-ia32/views_resources_200_percent.pak
+Spotify Jukebox-win32-ia32/xinput1_3.dll
+Spotify Jukebox-win32-ia32/locales/am.pak
+Spotify Jukebox-win32-ia32/locales/ar.pak
+Spotify Jukebox-win32-ia32/locales/bg.pak
+Spotify Jukebox-win32-ia32/locales/bn.pak
+Spotify Jukebox-win32-ia32/locales/ca.pak
+Spotify Jukebox-win32-ia32/locales/cs.pak
+Spotify Jukebox-win32-ia32/locales/da.pak
+Spotify Jukebox-win32-ia32/locales/de.pak
+Spotify Jukebox-win32-ia32/locales/el.pak
+Spotify Jukebox-win32-ia32/locales/en-GB.pak
+Spotify Jukebox-win32-ia32/locales/en-US.pak
+Spotify Jukebox-win32-ia32/locales/es-419.pak
+Spotify Jukebox-win32-ia32/locales/es.pak
+Spotify Jukebox-win32-ia32/locales/et.pak
+Spotify Jukebox-win32-ia32/locales/fa.pak
+Spotify Jukebox-win32-ia32/locales/fake-bidi.pak
+Spotify Jukebox-win32-ia32/locales/fi.pak
+Spotify Jukebox-win32-ia32/locales/fil.pak
+Spotify Jukebox-win32-ia32/locales/fr.pak
+Spotify Jukebox-win32-ia32/locales/gu.pak
+Spotify Jukebox-win32-ia32/locales/he.pak
+Spotify Jukebox-win32-ia32/locales/hi.pak
+Spotify Jukebox-win32-ia32/locales/hr.pak
+Spotify Jukebox-win32-ia32/locales/hu.pak
+Spotify Jukebox-win32-ia32/locales/id.pak
+Spotify Jukebox-win32-ia32/locales/it.pak
+Spotify Jukebox-win32-ia32/locales/ja.pak
+Spotify Jukebox-win32-ia32/locales/kn.pak
+Spotify Jukebox-win32-ia32/locales/ko.pak
+Spotify Jukebox-win32-ia32/locales/lt.pak
+Spotify Jukebox-win32-ia32/locales/lv.pak
+Spotify Jukebox-win32-ia32/locales/ml.pak
+Spotify Jukebox-win32-ia32/locales/mr.pak
+Spotify Jukebox-win32-ia32/locales/ms.pak
+Spotify Jukebox-win32-ia32/locales/nb.pak
+Spotify Jukebox-win32-ia32/locales/nl.pak
+Spotify Jukebox-win32-ia32/locales/pl.pak
+Spotify Jukebox-win32-ia32/locales/pt-BR.pak
+Spotify Jukebox-win32-ia32/locales/pt-PT.pak
+Spotify Jukebox-win32-ia32/locales/ro.pak
+Spotify Jukebox-win32-ia32/locales/ru.pak
+Spotify Jukebox-win32-ia32/locales/sk.pak
+Spotify Jukebox-win32-ia32/locales/sl.pak
+Spotify Jukebox-win32-ia32/locales/sr.pak
+Spotify Jukebox-win32-ia32/locales/sv.pak
+Spotify Jukebox-win32-ia32/locales/sw.pak
+Spotify Jukebox-win32-ia32/locales/ta.pak
+Spotify Jukebox-win32-ia32/locales/te.pak
+Spotify Jukebox-win32-ia32/locales/th.pak
+Spotify Jukebox-win32-ia32/locales/tr.pak
+Spotify Jukebox-win32-ia32/locales/uk.pak
+Spotify Jukebox-win32-ia32/locales/vi.pak
+Spotify Jukebox-win32-ia32/locales/zh-CN.pak
+Spotify Jukebox-win32-ia32/locales/zh-TW.pak
+Spotify Jukebox-win32-ia32/resources/electron.asar
+Spotify Jukebox-win32-ia32/resources/app/.bowerrc
+Spotify Jukebox-win32-ia32/resources/app/.gitignore
+Spotify Jukebox-win32-ia32/resources/app/.travis.yml
+Spotify Jukebox-win32-ia32/resources/app/bower.json
+Spotify Jukebox-win32-ia32/resources/app/contributors.txt
+Spotify Jukebox-win32-ia32/resources/app/LICENSE
+Spotify Jukebox-win32-ia32/resources/app/LICENSE.md
+Spotify Jukebox-win32-ia32/resources/app/main.js
+Spotify Jukebox-win32-ia32/resources/app/package.json
+Spotify Jukebox-win32-ia32/resources/app/README.md
+Spotify Jukebox-win32-ia32/resources/app/app/index-async.html
+Spotify Jukebox-win32-ia32/resources/app/app/index.html
+Spotify Jukebox-win32-ia32/resources/app/app/index.js
+Spotify Jukebox-win32-ia32/resources/app/app/npm-debug.log
+Spotify Jukebox-win32-ia32/resources/app/app/css/.gitkeep
+Spotify Jukebox-win32-ia32/resources/app/app/css/app.css
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-win32-ia32/resources/app/app/img/.gitkeep
+Spotify Jukebox-win32-ia32/resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-win32-ia32/resources/app/app/img/background_stars.png
+Spotify Jukebox-win32-ia32/resources/app/app/img/background_white.jpg
+Spotify Jukebox-win32-ia32/resources/app/app/img/btn_background.png
+Spotify Jukebox-win32-ia32/resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-win32-ia32/resources/app/app/img/ring.gif
+Spotify Jukebox-win32-ia32/resources/app/app/js/mainController.js
+Spotify Jukebox-win32-ia32/resources/app/app/partials/.gitkeep
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/bonus.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/button-09.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/button-16.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/button-17.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/coin.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/collect.wav
+Spotify Jukebox-win32-ia32/resources/app/app/sounds/poush.wav
+Spotify Jukebox-win32-x64/blink_image_resources_200_percent.pak
+Spotify Jukebox-win32-x64/content_resources_200_percent.pak
+Spotify Jukebox-win32-x64/content_shell.pak
+Spotify Jukebox-win32-x64/d3dcompiler_47.dll
+Spotify Jukebox-win32-x64/ffmpeg.dll
+Spotify Jukebox-win32-x64/icudtl.dat
+Spotify Jukebox-win32-x64/libEGL.dll
+Spotify Jukebox-win32-x64/libGLESv2.dll
+Spotify Jukebox-win32-x64/LICENSE
+Spotify Jukebox-win32-x64/LICENSES.chromium.html
+Spotify Jukebox-win32-x64/natives_blob.bin
+Spotify Jukebox-win32-x64/node.dll
+Spotify Jukebox-win32-x64/snapshot_blob.bin
+Spotify Jukebox-win32-x64/Spotify Jukebox.exe
+Spotify Jukebox-win32-x64/ui_resources_200_percent.pak
+Spotify Jukebox-win32-x64/version
+Spotify Jukebox-win32-x64/views_resources_200_percent.pak
+Spotify Jukebox-win32-x64/xinput1_3.dll
+Spotify Jukebox-win32-x64/locales/am.pak
+Spotify Jukebox-win32-x64/locales/ar.pak
+Spotify Jukebox-win32-x64/locales/bg.pak
+Spotify Jukebox-win32-x64/locales/bn.pak
+Spotify Jukebox-win32-x64/locales/ca.pak
+Spotify Jukebox-win32-x64/locales/cs.pak
+Spotify Jukebox-win32-x64/locales/da.pak
+Spotify Jukebox-win32-x64/locales/de.pak
+Spotify Jukebox-win32-x64/locales/el.pak
+Spotify Jukebox-win32-x64/locales/en-GB.pak
+Spotify Jukebox-win32-x64/locales/en-US.pak
+Spotify Jukebox-win32-x64/locales/es-419.pak
+Spotify Jukebox-win32-x64/locales/es.pak
+Spotify Jukebox-win32-x64/locales/et.pak
+Spotify Jukebox-win32-x64/locales/fa.pak
+Spotify Jukebox-win32-x64/locales/fake-bidi.pak
+Spotify Jukebox-win32-x64/locales/fi.pak
+Spotify Jukebox-win32-x64/locales/fil.pak
+Spotify Jukebox-win32-x64/locales/fr.pak
+Spotify Jukebox-win32-x64/locales/gu.pak
+Spotify Jukebox-win32-x64/locales/he.pak
+Spotify Jukebox-win32-x64/locales/hi.pak
+Spotify Jukebox-win32-x64/locales/hr.pak
+Spotify Jukebox-win32-x64/locales/hu.pak
+Spotify Jukebox-win32-x64/locales/id.pak
+Spotify Jukebox-win32-x64/locales/it.pak
+Spotify Jukebox-win32-x64/locales/ja.pak
+Spotify Jukebox-win32-x64/locales/kn.pak
+Spotify Jukebox-win32-x64/locales/ko.pak
+Spotify Jukebox-win32-x64/locales/lt.pak
+Spotify Jukebox-win32-x64/locales/lv.pak
+Spotify Jukebox-win32-x64/locales/ml.pak
+Spotify Jukebox-win32-x64/locales/mr.pak
+Spotify Jukebox-win32-x64/locales/ms.pak
+Spotify Jukebox-win32-x64/locales/nb.pak
+Spotify Jukebox-win32-x64/locales/nl.pak
+Spotify Jukebox-win32-x64/locales/pl.pak
+Spotify Jukebox-win32-x64/locales/pt-BR.pak
+Spotify Jukebox-win32-x64/locales/pt-PT.pak
+Spotify Jukebox-win32-x64/locales/ro.pak
+Spotify Jukebox-win32-x64/locales/ru.pak
+Spotify Jukebox-win32-x64/locales/sk.pak
+Spotify Jukebox-win32-x64/locales/sl.pak
+Spotify Jukebox-win32-x64/locales/sr.pak
+Spotify Jukebox-win32-x64/locales/sv.pak
+Spotify Jukebox-win32-x64/locales/sw.pak
+Spotify Jukebox-win32-x64/locales/ta.pak
+Spotify Jukebox-win32-x64/locales/te.pak
+Spotify Jukebox-win32-x64/locales/th.pak
+Spotify Jukebox-win32-x64/locales/tr.pak
+Spotify Jukebox-win32-x64/locales/uk.pak
+Spotify Jukebox-win32-x64/locales/vi.pak
+Spotify Jukebox-win32-x64/locales/zh-CN.pak
+Spotify Jukebox-win32-x64/locales/zh-TW.pak
+Spotify Jukebox-win32-x64/resources/electron.asar
+Spotify Jukebox-win32-x64/resources/app/.bowerrc
+Spotify Jukebox-win32-x64/resources/app/.gitignore
+Spotify Jukebox-win32-x64/resources/app/.travis.yml
+Spotify Jukebox-win32-x64/resources/app/bower.json
+Spotify Jukebox-win32-x64/resources/app/contributors.txt
+Spotify Jukebox-win32-x64/resources/app/LICENSE
+Spotify Jukebox-win32-x64/resources/app/LICENSE.md
+Spotify Jukebox-win32-x64/resources/app/main.js
+Spotify Jukebox-win32-x64/resources/app/package.json
+Spotify Jukebox-win32-x64/resources/app/README.md
+Spotify Jukebox-win32-x64/resources/app/app/index-async.html
+Spotify Jukebox-win32-x64/resources/app/app/index.html
+Spotify Jukebox-win32-x64/resources/app/app/index.js
+Spotify Jukebox-win32-x64/resources/app/app/npm-debug.log
+Spotify Jukebox-win32-x64/resources/app/app/css/.gitkeep
+Spotify Jukebox-win32-x64/resources/app/app/css/app.css
+Spotify Jukebox-win32-x64/resources/app/app/fonts/advanced_dot_digital-7.ttf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/ARCADE.TTF
+Spotify Jukebox-win32-x64/resources/app/app/fonts/Big Daddy LED TFB.ttf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/DJB Get Digital.ttf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/DOTCIRFUL Regular.otf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/ka1.ttf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/LEDCalculator.ttf
+Spotify Jukebox-win32-x64/resources/app/app/fonts/New Led Board tfb.ttf
+Spotify Jukebox-win32-x64/resources/app/app/img/.gitkeep
+Spotify Jukebox-win32-x64/resources/app/app/img/arrow_index_back.png
+Spotify Jukebox-win32-x64/resources/app/app/img/background_stars.png
+Spotify Jukebox-win32-x64/resources/app/app/img/background_white.jpg
+Spotify Jukebox-win32-x64/resources/app/app/img/btn_background.png
+Spotify Jukebox-win32-x64/resources/app/app/img/pink-stripes-background.jpg
+Spotify Jukebox-win32-x64/resources/app/app/img/ring.gif
+Spotify Jukebox-win32-x64/resources/app/app/js/mainController.js
+Spotify Jukebox-win32-x64/resources/app/app/partials/.gitkeep
+Spotify Jukebox-win32-x64/resources/app/app/sounds/bonus.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/button-09.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/button-16.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/button-17.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/coin.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/collect.wav
+Spotify Jukebox-win32-x64/resources/app/app/sounds/poush.wav
