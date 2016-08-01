@@ -35,6 +35,21 @@ app.controller('mainController', function ($scope) {
     $scope.currentRuntime = 0
     $scope.selectedButtonIndex = 1
 
+    $scope.addTrackToUpcoming = function (trackIndex) {
+        playSound('button-20');
+        manageAddTrackToUpcomingList(trackIndex);
+    };
+
+    $scope.loadPreviousPage = function () {
+        playSound('button-17');
+        loadTracks($scope.currentPage - 1)
+    };
+
+    $scope.loadNextPage = function () {
+        playSound('button-17');
+        loadTracks($scope.currentPage + 1)
+    };
+
     $scope.comingUp = function () {
         return $scope.upcomingTrackList.length;
     };
@@ -134,7 +149,7 @@ app.controller('mainController', function ($scope) {
         console.log("playlist id -> " + playlistData.playlist_id);
 
         spotifyApi.getPlaylistTracks(playlistData.playlist_user, playlistData.playlist_id, {
-            'offset': offset * 11, 'limit': 12
+            'offset': offset * 12, 'limit': 12
         })
             .then(function (data) {
                 didLoadedTracks(data.body.items);
