@@ -33,7 +33,6 @@ var mainWindow;
 var mainMenu;
 
 function launchApp() {
-  setGlobalShortcuts()
   checkAccessToken(function () {
     loadUserPlaylists()
   })
@@ -48,7 +47,8 @@ function createAndShowMainWindow() {
     resizable: true,
     title: "Spotify Jukebox",
     show: false,
-    maximizable: true
+    maximizable: true,
+    fullscreen: true
   });
 
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
@@ -64,8 +64,9 @@ function createAndShowMainWindow() {
     mainWindow = null;
   });
 
-  mainWindow.once('ready-to-show', () => {
+  mainWindow.once('ready-to-show', function () {
     mainWindow.show()
+    setGlobalShortcuts()
   })
 }
 
@@ -77,7 +78,8 @@ app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
-    app.quit();
+    console.log("all windows closed")
+    //app.quit();
   }
 });
 
@@ -125,7 +127,7 @@ function createMenuWithPlaylists(playlists) {
       { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
       { type: "separator" },
       { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
-      { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+      { label: "Quit", accelerator: "CmdOrCtrl+Q", click: function() { app.quit(); }}
     ]}, {
     label: "Spotify",
     submenu: [

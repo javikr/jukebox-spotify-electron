@@ -35,10 +35,6 @@ app.controller('mainController', function ($scope) {
     $scope.currentRuntime = 0
     $scope.selectedButtonIndex = 1
 
-    $scope.addTrackToUpcoming = function (trackIndex) {
-        manageAddTrackToUpcomingList(trackIndex);
-    };
-
     $scope.comingUp = function () {
         return $scope.upcomingTrackList.length;
     };
@@ -359,7 +355,7 @@ app.controller('mainController', function ($scope) {
             case 10:
             case 11:
             case 12:
-                playSound('button-09');
+                playSound('button-20');
                 manageAddTrackToUpcomingList($scope.selectedButtonIndex);
                 break;
             case 13:
@@ -393,7 +389,7 @@ app.controller('mainController', function ($scope) {
     // START HERE
 
     spotifyPlayer.player.on('ready', function () {
-        console.log("Spotify ready")
+        console.log("Spotify app ready!")
         savePlayListInScope(function () {
             loadTracks($scope.currentPage)
             spotifyPlayer.player.play()
