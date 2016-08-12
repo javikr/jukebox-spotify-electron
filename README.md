@@ -1,9 +1,11 @@
 [Arcade Jukebox for Spotify™][1]
 =========================
 
+[](http://theclashsoft.com/jukebox_spotify.png)
+
 Turn your Spotify music library into a beautiful old-style arcade Jukebox!!
 
-Developed by [Javier Aznar][2]. Made with the awesome [Electron framework][4]
+Developed by [Javier Aznar][2]. Made with the awesome [Electron framework][4] and [AngularJS][5]
 
 No affiliation with [Spotify][3].
 
@@ -11,6 +13,44 @@ No affiliation with [Spotify][3].
 [2]: http://www.theclashsoft.com
 [3]: http://www.spotify.com/
 [4]: http://electron.atom.io/
+[5]: https://angularjs.org/
+
+Features
+------------
+
+* Beautiful arcade jukebox frontend for the Spotify official desktop app.
+* Easy customizable: html & css styles.
+* Keyboard mapped: great for arcade boxes, bartops, etc...
+* Login with your Spotify account.
+* Select a playlist to load it on the Jukebox.
+
+How to install
+------------
+
+Download a compiled package for Windows or Mac:
+[Last release](http://)
+
+Compile and run yourself:
+
+```sh 
+$ git clone https://github.com/javikr/jukebox-spotify-electron.git
+$ npm install
+$ npm start 
+```
+
+
+How to use
+------------
+
+1) Launch the Jukebox and the Spotify desktop app.
+2) Login with your Spotify account. (only the first time)
+3) Select a playlist from the main menu.
+4) Press the number key '5' to add credits.
+5) Move the cursor using the arrow keys.
+6) Select a track pressing the number key '1'
+7) The track will be added to the queue!
+8) Enjoy :)
+
 
 Requirements
 ------------

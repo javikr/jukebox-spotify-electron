@@ -4,8 +4,8 @@ const storage = require('electron-json-storage');
 const SpotifyWebApi = require('spotify-web-api-node');
 const moment = require('moment');
 
-var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca';
-var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
+var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca'; // put yours!
+var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99'; // put yours!
 var REDIRECT_URI = 'http://localhost';
 
 var spotifyApi = new SpotifyWebApi({
@@ -34,6 +34,10 @@ app.controller('mainController', function ($scope) {
     $scope.currentPage = 0
     $scope.currentRuntime = 0
     $scope.selectedButtonIndex = 1
+    
+    $scope.clickAddCredits = function () {
+        addCredits(1)
+    };
 
     $scope.addTrackToUpcoming = function (trackIndex) {
         playSound('button-20');

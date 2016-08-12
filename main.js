@@ -10,8 +10,8 @@ const ipcMain = electron.ipcMain;
 const Menu = electron.Menu;
 const SpotifyWebApi = require('spotify-web-api-node');
 
-var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca';
-var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99';
+var CLIENT_ID = '6647f460509d4c6cb0b5d84fe1811bca'; // put yours!
+var CLIENT_SECRET = 'b43919f0534d4ea3a746f54d71df1f99'; // put yours!
 var REDIRECT_URI = 'http://localhost';
 
 var spotifyApi = new SpotifyWebApi({
@@ -124,8 +124,6 @@ function createMenuWithPlaylists(playlists) {
   var template = [{
     label: "Application",
     submenu: [
-      { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
-      { type: "separator" },
       { label: 'Show debug', click() { mainWindow.webContents.openDevTools(); } },
       { label: "Quit", accelerator: "CmdOrCtrl+Q", click: function() { app.quit(); }}
     ]}, {
