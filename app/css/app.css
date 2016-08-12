@@ -88,6 +88,10 @@ body {
     padding-bottom: 5px;
 }
 
+.instructionsBox {
+    text-align: left;
+}
+
 .buttonPurple {
     background-image: url('../img/btn_background.png');
     background-repeat: no-repeat;
@@ -112,11 +116,13 @@ body {
 
 .tracksContainer {
     margin-top: 20px;
-    min-height: 255px;
+    min-height: 400px;
     text-align: center;
 }
 
-.loading {
+.loadingContainer {
+    margin-top: 20px;
+    min-height: 400px;
     text-align: center;
 }
 
@@ -184,8 +190,10 @@ body {
 
 .selected {
     color: yellow;
-    border-width: 4px;
     border-color: yellow;
+    border-width: 5px;
+
+    zoom: 1.4;
 }
 
 .grayText {

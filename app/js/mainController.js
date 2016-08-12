@@ -21,11 +21,11 @@ var app = angular.module('JukeboxApp', []);
 
 app.controller('mainController', function ($scope) {
 
-    var timerCheckTrack = 0;
+    var timerCheckTrack = 0
+    var tracksNumber = 12
     var loadingTrack = false
     var loadingTrackUri = undefined
 
-    $scope.loadingHidden = false
     $scope.tracksList = []
     $scope.upcomingTrackList = [];
     $scope.credits = 0;
@@ -93,9 +93,9 @@ app.controller('mainController', function ($scope) {
     });
 
     ipcRenderer.on('reload-tracks', function () {
+        if ($scope.loadingHidden == false) { return }
         $scope.tracksList = []
         $scope.currentPage = 0
-        $scope.loadingHidden = false
         savePlayListInScope(function () {
             loadTracks($scope.currentPage)
         })
@@ -104,7 +104,7 @@ app.controller('mainController', function ($scope) {
     // METHODS
 
     function manageAddTrackToUpcomingList(trackIndex) {
-        console.log('manageAddTrackToUpcomingList');
+        if ($scope.loadingHidden == false) { return }
         if ($scope.credits <= 0 || $scope.tracksList.length == 0) {
             playSound('poush');
             return;
@@ -116,7 +116,6 @@ app.controller('mainController', function ($scope) {
     }
 
     function playSound(soundName) {
-        console.log("play sound -> " + soundName)
         var audio = new Audio(__dirname + '/sounds/' + soundName + '.wav');
         audio.currentTime = 0;
         audio.play();
@@ -131,6 +130,7 @@ app.controller('mainController', function ($scope) {
     }
     
     function loadTracks(offset) {
+        if ($scope.loadingHidden == false || offset < 0) { return }
         checkAccessToken(function () {
             doLoadTracksForCurrentPlaylist(offset)
         })
@@ -141,28 +141,33 @@ app.controller('mainController', function ($scope) {
         var playlistData = $scope.playList;
 
         if (playlistData === undefined) {
-            console.log("ERROR: PLAYLIST NO CONFIGURADO")
+            console.log("ERROR: PLAYLIST NOT SELECTED! Please select it from the Spotify menu")
             return
         }
 
-        console.log("user_id -> " + playlistData.playlist_user);
+        showLoading()
+
+        console.log("user id -> " + playlistData.playlist_user);
         console.log("playlist id -> " + playlistData.playlist_id);
 
         spotifyApi.getPlaylistTracks(playlistData.playlist_user, playlistData.playlist_id, {
-            'offset': offset * 12, 'limit': 12
+            'offset': offset * tracksNumber, 'limit': tracksNumber
         })
             .then(function (data) {
                 didLoadedTracks(data.body.items);
-                $scope.currentPage = offset
+                if (data.body.items.length == 12) {
+                    $scope.currentPage = offset
+                }
                 $scope.$apply();
+                hideLoading()
             }, function (err) {
                 didGetErrorLoadingTracks(err);
+                hideLoading()
             });
     }
 
     function didLoadedTracks(tracks) {
-        console.log('Tracks loaded! -> ' + tracks);
-        $scope.loadingHidden = true
+        console.log('Tracks loaded!');
         $scope.tracksList = tracks;
         $scope.$apply();
         beginCheckingCurrentStatusTrack();
@@ -187,10 +192,6 @@ app.controller('mainController', function ($scope) {
     function beginCheckingCurrentStatusTrack() {
         clearInterval(timerCheckTrack);
         timerCheckTrack = setInterval(function () {
-            var currentTrackId
-            if ($scope.nowPlayingTrack != null) {
-                currentTrackId = $scope.nowPlayingTrack.track.uri
-            }
             updateCurrentTrackInfo()
 
             var state = spotifyPlayer.status
@@ -399,6 +400,14 @@ app.controller('mainController', function ($scope) {
                 ipcRenderer.send("request_oauth_token")
             }
         })
+    }
+
+    function showLoading() {
+        $scope.loadingHidden = false
+    }
+
+    function hideLoading() {
+        $scope.loadingHidden = true
     }
 
     // START HERE
