@@ -1,7 +1,7 @@
 [Arcade Jukebox for Spotify™][1]
 =========================
 
-[](http://theclashsoft.com/jukebox_spotify.png)
+![alt tag](http://theclashsoft.com/jukebox_spotify.png)
 
 Turn your Spotify music library into a beautiful old-style arcade Jukebox!!
 
