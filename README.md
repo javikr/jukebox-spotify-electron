@@ -1,4 +1,4 @@
-[Arcade Jukebox for Spotify™][1]
+# [Arcade Jukebox for Spotify™][1]
 
 =========================
 
