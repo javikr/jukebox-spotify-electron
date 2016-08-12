@@ -26,9 +26,11 @@ Features
 How to install
 ------------
 
+**Option 1:**
 Download a compiled package for Windows or Mac:
 [Releases](https://github.com/javikr/jukebox-spotify-electron/releases)
 
+**Option 2:**
 Compile and run yourself:
 
 ```sh 
