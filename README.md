@@ -1,5 +1,7 @@
-[Arcade Jukebox for Spotify™][1]
+[Arcade Jukebox for Spotify™][1] [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/javikr)
+
 =========================
+
 
 ![alt tag](http://theclashsoft.com/jukebox_spotify.png)
 
