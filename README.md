@@ -1,5 +1,4 @@
 # [Arcade Jukebox for Spotify™][1]
-------------
 
 ![alt tag](http://theclashsoft.com/jukebox_spotify.png)
 
