@@ -41,14 +41,14 @@ $ npm start
 How to use
 ------------
 
-1) Launch the Jukebox and the Spotify desktop app.
-2) Login with your Spotify account. (only the first time)
-3) Select a playlist from the main menu.
-4) Press the number key '5' to add credits.
-5) Move the cursor using the arrow keys.
-6) Select a track pressing the number key '1'
-7) The track will be added to the queue!
-8) Enjoy :)
+1. Launch the Jukebox and the Spotify desktop app.
+2. Login with your Spotify account. (only the first time)
+3. Select a playlist from the main menu.
+4. Press the number key '5' to add credits.
+5. Move the cursor using the arrow keys.
+6. Select a track pressing the number key '1'
+7. The track will be added to the queue!
+8. Enjoy :)
 
 
 Donate
