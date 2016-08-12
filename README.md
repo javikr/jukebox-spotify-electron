@@ -1,7 +1,5 @@
 # [Arcade Jukebox for Spotify™][1]
-
-=========================
-
+------------
 
 ![alt tag](http://theclashsoft.com/jukebox_spotify.png)
 
@@ -56,8 +54,6 @@ How to use
 
 Donate
 ------------
-
-Paypal
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/javikr)
 
