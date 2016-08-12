@@ -1,4 +1,4 @@
-[Arcade Jukebox for Spotify™][1] [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/javikr)
+[Arcade Jukebox for Spotify™][1]
 
 =========================
 
@@ -53,6 +53,13 @@ How to use
 7) The track will be added to the queue!
 8) Enjoy :)
 
+
+Donate
+------------
+
+Paypal
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/javikr)
 
 Requirements
 ------------
