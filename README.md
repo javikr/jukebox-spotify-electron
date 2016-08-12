@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # F1FeederApp-Part1
 
 ## Getting Started
@@ -27,3 +28,6 @@ You can access your app at
 ```
 http://localhost:8000/app/
 ```
+=======
+# jukebox-spotify-electron
+>>>>>>> 1d70778b595002b387ca3f282b24bd8142989b56
