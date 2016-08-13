@@ -99,14 +99,23 @@ app.controller('mainController', function ($scope) {
 
     ipcRenderer.on('reload-tracks', function () {
         if ($scope.loadingHidden == false) { return }
+        reloadTracks()
+    });
+
+    ipcRenderer.on('changed-playlist', function () {
+        $scope.upcomingTrackList = [];
+        reloadTracks()
+    });
+
+    // METHODS
+
+    function reloadTracks() {
         $scope.tracksList = [];
         $scope.currentPage = 0;
         savePlayListInScope(function () {
             loadTracks($scope.currentPage)
         })
-    });
-
-    // METHODS
+    }
 
     function manageAddTrackToUpcomingList(trackIndex) {
         if ($scope.loadingHidden == false) { return }
@@ -263,7 +272,7 @@ app.controller('mainController', function ($scope) {
     function playTrack(trackInfo) {
         var playlistData = $scope.playList;
         if (playlistData !== undefined && playlistData.playlist_uri !== undefined) {
-            console.log("PLAY TRACK -> " + trackInfo.track.uri);
+            console.log("PLAY TRACK -> " + trackInfo.track.uri + " in PLAYLIST -> " + playlistData.playlist_id);
             spotifyPlayer.player.play(trackInfo.track.uri, playlistData.playlist_uri);
             loadingTrackUri = trackInfo.track.uri;
             loadingTrack = false
@@ -278,6 +287,7 @@ app.controller('mainController', function ($scope) {
                 storage.get('playlist', function (error, playlistData) {
                     if (error) throw error;
                     $scope.playList = playlistData;
+                    $scope.$apply();
                     completion()
                 });
             } else {

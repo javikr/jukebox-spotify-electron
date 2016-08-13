@@ -120,7 +120,6 @@ function setGlobalShortcuts() {
 }
 
 function createMenuWithPlaylists(playlists) {
-
   var template = [{
     label: "Application",
     submenu: [
@@ -219,7 +218,7 @@ function didSelectPlaylist(playlist) {
 
   storage.set('playlist', { playlist_id: playlist.id, playlist_uri: playlist.uri, playlist_user: playlist.owner.id }, function (error) {
     if (error) throw error;
-    mainWindow.webContents.send('reload-tracks');
+    mainWindow.webContents.send('changed-playlist');
   });
 }
 
