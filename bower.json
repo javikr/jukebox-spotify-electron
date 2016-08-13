@@ -1,7 +1,7 @@
 {
   "name": "jukebox-spotify",
   "description": "A Jukebox for Spotify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/javikr/jukebox-spotify-electron",
   "license": "MIT",
   "private": true,
