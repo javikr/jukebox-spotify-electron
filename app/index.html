@@ -104,9 +104,14 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-2 col-md-offset-1 bottomBox">
-      <h4>CREDITS</h4>
-      <div class="creditsLabel" ng-click="clickAddCredits()">{{credits}}</div>
+    <div class="col-xs-2 col-md-offset-1">
+      <div class="pageNumber">
+        {{currentPage + 1}} of {{totalPages}}
+      </div>
+      <div class="bottomBox">
+        <h4>CREDITS</h4>
+        <div class="creditsLabel" ng-click="clickAddCredits()">{{credits}}</div>
+      </div>
     </div>
     <div class="col-xs-3 col-md-offset-1 bottomBox instructionsBox">
       <h4>INSTRUCTIONS</h4>

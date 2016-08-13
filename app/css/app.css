@@ -192,10 +192,16 @@ body {
     color: yellow;
     border-color: yellow;
     border-width: 5px;
-
     zoom: 1.4;
 }
 
 .grayText {
     color: #d5d5d5;
+}
+
+.pageNumber {
+    font-family: 'arcade';
+    font-size: 22px;
+    text-align: center;
+    color: whitesmoke;
 }

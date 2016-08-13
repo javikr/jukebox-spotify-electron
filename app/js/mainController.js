@@ -14,26 +14,27 @@ var spotifyApi = new SpotifyWebApi({
     redirectUri: REDIRECT_URI
 });
 
-var SpotifyWebHelper = require('spotify-web-helper')
-var spotifyPlayer = SpotifyWebHelper()
+var SpotifyWebHelper = require('spotify-web-helper');
+var spotifyPlayer = SpotifyWebHelper();
 
 var app = angular.module('JukeboxApp', []);
 
 app.controller('mainController', function ($scope) {
 
-    var timerCheckTrack = 0
-    var tracksNumber = 12
-    var loadingTrack = false
-    var loadingTrackUri = undefined
+    var timerCheckTrack = 0;
+    var tracksByPage = 12;
+    var loadingTrack = false;
+    var loadingTrackUri = undefined;
 
-    $scope.tracksList = []
+    $scope.tracksList = [];
     $scope.upcomingTrackList = [];
     $scope.credits = 0;
     $scope.nameFilter = null;
     $scope.nowPlayingTrack = null;
-    $scope.currentPage = 0
-    $scope.currentRuntime = 0
-    $scope.selectedButtonIndex = 1
+    $scope.totalPages = 0;
+    $scope.currentPage = 0;
+    $scope.currentRuntime = 0;
+    $scope.selectedButtonIndex = 1;
     
     $scope.clickAddCredits = function () {
         addCredits(1)
@@ -63,7 +64,7 @@ app.controller('mainController', function ($scope) {
     ipcRenderer.on('logout', function () {
         storage.clear(function (error) {
             if (error) throw error;
-            $scope.tracksList = []
+            $scope.tracksList = [];
             $scope.$apply();
             ipcRenderer.send("request_oauth_token")
         });
@@ -79,16 +80,16 @@ app.controller('mainController', function ($scope) {
         switch (direction) {
             case 'Right':
                 moveCursorRight();
-                return
+                return;
             case 'Left':
                 moveCursorLeft();
-                return
+                return;
             case 'Up':
                 moveCursorUp();
-                return
+                return;
             case 'Down':
                 moveCursorDown();
-                return
+                return;
         }
     });
 
@@ -98,8 +99,8 @@ app.controller('mainController', function ($scope) {
 
     ipcRenderer.on('reload-tracks', function () {
         if ($scope.loadingHidden == false) { return }
-        $scope.tracksList = []
-        $scope.currentPage = 0
+        $scope.tracksList = [];
+        $scope.currentPage = 0;
         savePlayListInScope(function () {
             loadTracks($scope.currentPage)
         })
@@ -115,7 +116,7 @@ app.controller('mainController', function ($scope) {
         }
         $scope.credits -= 1;
 
-        var trackInfo = $scope.tracksList[trackIndex - 1]
+        var trackInfo = $scope.tracksList[trackIndex - 1];
         $scope.upcomingTrackList.push(trackInfo);
     }
 
@@ -155,10 +156,11 @@ app.controller('mainController', function ($scope) {
         console.log("playlist id -> " + playlistData.playlist_id);
 
         spotifyApi.getPlaylistTracks(playlistData.playlist_user, playlistData.playlist_id, {
-            'offset': offset * tracksNumber, 'limit': tracksNumber
+            'offset': offset * tracksByPage, 'limit': tracksByPage
         })
             .then(function (data) {
                 didLoadedTracks(data.body.items);
+                managePageLabel(data.body.total);
                 if (data.body.items.length == 12) {
                     $scope.currentPage = offset
                 }
@@ -193,13 +195,18 @@ app.controller('mainController', function ($scope) {
         }
     }
 
+    function managePageLabel(totalTracks) {
+        if (totalTracks === undefined) { return }
+        $scope.totalPages = Math.ceil(totalTracks / tracksByPage);
+    }
+
     function beginCheckingCurrentStatusTrack() {
         clearInterval(timerCheckTrack);
         timerCheckTrack = setInterval(function () {
             updateCurrentTrackInfo()
 
-            var state = spotifyPlayer.status
-            var currentTrackUri = state.track.track_resource.uri
+            var state = spotifyPlayer.status;
+            var currentTrackUri = state.track.track_resource.uri;
 
             //console.log('currentTrackId ->' + currentTrackId)
             //console.log('newTrackId ->' + newTrackId)
@@ -208,8 +215,8 @@ app.controller('mainController', function ($scope) {
             //console.log('track total -> ' + $scope.nowPlayingTrack.track.duration)
 
             if (loadingTrack == false && (loadingTrackUri == undefined || currentTrackUri == loadingTrackUri) && state.playing_position > 5 && Math.ceil(state.playing_position) == $scope.nowPlayingTrack.track.duration - 1) {
-                loadingTrack == true
-                $scope.nowPlayingTrack.track.duration = 0
+                loadingTrack == true;
+                $scope.nowPlayingTrack.track.duration = 0;
                 $scope.$apply(function () {
                     playNextTrack()
                 });
@@ -220,8 +227,8 @@ app.controller('mainController', function ($scope) {
     function playNextTrack() {
         console.log("Play next track");
         if ($scope.upcomingTrackList.length > 0) {
-            var nextTrack = $scope.upcomingTrackList[0]
-            $scope.upcomingTrackList.shift()
+            var nextTrack = $scope.upcomingTrackList[0];
+            $scope.upcomingTrackList.shift();
             playTrack(nextTrack)
         } else {
             playRandomTrack()
@@ -254,11 +261,11 @@ app.controller('mainController', function ($scope) {
     }
 
     function playTrack(trackInfo) {
-        var playlistData = $scope.playList
+        var playlistData = $scope.playList;
         if (playlistData !== undefined && playlistData.playlist_uri !== undefined) {
             console.log("PLAY TRACK -> " + trackInfo.track.uri);
             spotifyPlayer.player.play(trackInfo.track.uri, playlistData.playlist_uri);
-            loadingTrackUri = trackInfo.track.uri
+            loadingTrackUri = trackInfo.track.uri;
             loadingTrack = false
         } else {
             console.log("ERROR: PLAYLIST NOT DEFINED!");
@@ -270,8 +277,7 @@ app.controller('mainController', function ($scope) {
             if (hasKey == true) {
                 storage.get('playlist', function (error, playlistData) {
                     if (error) throw error;
-
-                    $scope.playList = playlistData
+                    $scope.playList = playlistData;
                     completion()
                 });
             } else {
@@ -396,7 +402,7 @@ app.controller('mainController', function ($scope) {
             if (hasKey == true) {
                 storage.get('spotify_token', function (error, data) {
                     if (error) throw error;
-                    console.log("Saved token!")
+                    console.log("Saved token!");
                     spotifyApi.setAccessToken(data.access_token);
                     completion()
                 });
@@ -417,9 +423,9 @@ app.controller('mainController', function ($scope) {
     // START HERE
 
     spotifyPlayer.player.on('ready', function () {
-        console.log("Spotify app ready!")
+        console.log("Spotify app ready!");
         savePlayListInScope(function () {
-            loadTracks($scope.currentPage)
+            loadTracks($scope.currentPage);
             spotifyPlayer.player.play()
         })
     });
