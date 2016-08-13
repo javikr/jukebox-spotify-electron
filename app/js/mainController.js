@@ -107,6 +107,10 @@ app.controller('mainController', function ($scope) {
         reloadTracks()
     });
 
+    ipcRenderer.on('skip-track', function () {
+        playNextTrack()
+    });
+
     // METHODS
 
     function reloadTracks() {

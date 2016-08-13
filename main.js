@@ -36,6 +36,7 @@ function launchApp() {
   checkAccessToken(function () {
     loadUserPlaylists()
   })
+  setGlobalShortcuts()
 }
 
 function createAndShowMainWindow() {
@@ -66,7 +67,6 @@ function createAndShowMainWindow() {
 
   mainWindow.once('ready-to-show', function () {
     mainWindow.show()
-    setGlobalShortcuts()
   })
 }
 
@@ -117,6 +117,10 @@ function setGlobalShortcuts() {
   globalShortcut.register('1', function () {
     mainWindow.webContents.send('click-enter');
   });
+
+  globalShortcut.register('S', function () {
+    mainWindow.webContents.send('skip-track');
+  });
 }
 
 function createMenuWithPlaylists(playlists) {
@@ -129,13 +133,14 @@ function createMenuWithPlaylists(playlists) {
     label: "Spotify",
     submenu: [
       { label: 'Logout', click() { mainWindow.webContents.send('logout'); } },
+      { label: 'Skip current', click() { mainWindow.webContents.send('skip-track'); } },
       { label: 'Playlists', submenu: [] }
     ]}
   ];
 
   obtainCurrentPlaylist(function (selectedPlaylistId) {
     console.log("selectedPlaylistId -> " + selectedPlaylistId);
-    var playlistsSubmenu = template[1].submenu[1].submenu;
+    var playlistsSubmenu = template[1].submenu[2].submenu;
     playlists.forEach(function(playlist) {
       playlistsSubmenu.push({ label: playlist.name,type: 'radio', checked: (selectedPlaylistId == playlist.id), click() { didSelectPlaylist(playlist) }})
     });
