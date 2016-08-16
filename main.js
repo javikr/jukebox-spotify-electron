@@ -36,7 +36,6 @@ function launchApp() {
   checkAccessToken(function () {
     loadUserPlaylists()
   })
-  setGlobalShortcuts()
 }
 
 function createAndShowMainWindow() {
@@ -70,27 +69,6 @@ function createAndShowMainWindow() {
   })
 }
 
-// initialization and is ready to create browser windows.
-app.on('ready', launchApp);
-
-// Quit when all windows are closed.
-app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
-    console.log("all windows closed")
-    //app.quit();
-  }
-});
-
-app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) {
-    createAndShowMainWindow();
-  }
-});
-
 function setGlobalShortcuts() {
   globalShortcut.unregisterAll();
 
@@ -117,10 +95,6 @@ function setGlobalShortcuts() {
   globalShortcut.register('1', function () {
     mainWindow.webContents.send('click-enter');
   });
-
-  globalShortcut.register('S', function () {
-    mainWindow.webContents.send('skip-track');
-  });
 }
 
 function createMenuWithPlaylists(playlists) {
@@ -133,7 +107,7 @@ function createMenuWithPlaylists(playlists) {
     label: "Spotify",
     submenu: [
       { label: 'Logout', click() { mainWindow.webContents.send('logout'); } },
-      { label: 'Skip current', click() { mainWindow.webContents.send('skip-track'); } },
+      { label: 'Skip current', accelerator: "CmdOrCtrl+S", click() { mainWindow.webContents.send('skip-track'); } },
       { label: 'Playlists', submenu: [] }
     ]}
   ];
@@ -169,6 +143,7 @@ function loadUserPlaylists() {
             createMenuWithPlaylists(data.body.items)
             createAndShowMainWindow()
             checkAnyPlaylistSelected(data.body.items[0])
+            setGlobalShortcuts()
           },function(err) {
             console.log('Something went wrong!', err);
             if (err.statusCode == 401 || err.statusCode == 403) {
@@ -244,16 +219,20 @@ function checkAccessToken(completion) {
 }
 
 function loginToSpotify() {
-  const options = {
-    scope: 'user-read-private playlist-read-private playlist-read-collaborative user-library-read'
-  };
 
   const windowParams = {
     alwaysOnTop: true,
     autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: false
-    }
+    },
+    width: 800,
+    height: 600,
+    resizable: true,
+    title: "Spotify Login",
+    show: true,
+    maximizable: false,
+    fullscreen: false
   };
 
   const myApiOauth = electronOauth2(config, windowParams);
@@ -262,6 +241,10 @@ function loginToSpotify() {
     if (error) throw error;
 
     if (hasKey == true) {
+      var options = {
+        scope: 'user-read-private playlist-read-private playlist-read-collaborative user-library-read'
+      };
+
       storage.get('spotify_token', function (error, data) {
         if (error) throw error;
         if (data.refresh_token === undefined) {
@@ -287,24 +270,50 @@ function loginToSpotify() {
       })
       })
     } else {
+      var options = {
+        scope: 'user-read-private playlist-read-private playlist-read-collaborative user-library-read',
+        show_dialog: true
+      };
+
       myApiOauth.getAccessToken(options).then(token => {
         console.log("token access_token -> " + token.access_token);
-      console.log("token refresh_token -> " + token.refresh_token);
+        console.log("token refresh_token -> " + token.refresh_token);
 
-      storage.set('spotify_token', { access_token: token.access_token, refresh_token: token.refresh_token }, function (error) {
-        if (error) throw error;
-        spotifyApi.setAccessToken(token.access_token);
-        reloadMeInfo(function () {
-          loadUserPlaylists()
-          if (mainWindow !== undefined) {
-            mainWindow.webContents.send('reload-tracks');
-          }
-        })
-      });
-    })
+        storage.set('spotify_token', { access_token: token.access_token, refresh_token: token.refresh_token }, function (error) {
+          if (error) throw error;
+          spotifyApi.setAccessToken(token.access_token);
+          reloadMeInfo(function () {
+            loadUserPlaylists()
+            if (mainWindow !== undefined) {
+              mainWindow.webContents.send('reload-tracks');
+            }
+          })
+        });
+      })
     }
   })
 }
+
+// initialization and is ready to create browser windows.
+app.on('ready', launchApp);
+
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+  // On OS X it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform !== 'darwin') {
+    console.log("all windows closed")
+    //app.quit();
+  }
+});
+
+app.on('activate', function () {
+  // On OS X it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (mainWindow === null) {
+    launchApp()
+  }
+});
 
 // IPC
 
@@ -313,3 +322,10 @@ ipcMain.on('request_oauth_token', function () {
   loginToSpotify()
 });
 
+ipcMain.on('logout-user', function () {
+  console.log("logout-user");
+  storage.clear(function (error) {
+    if (error) throw error;
+    loginToSpotify()
+  });
+});

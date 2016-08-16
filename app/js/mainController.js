@@ -62,12 +62,9 @@ app.controller('mainController', function ($scope) {
     // IPC COMUNICATION
 
     ipcRenderer.on('logout', function () {
-        storage.clear(function (error) {
-            if (error) throw error;
-            $scope.tracksList = [];
-            $scope.$apply();
-            ipcRenderer.send("request_oauth_token")
-        });
+        $scope.tracksList = [];
+        $scope.$apply();
+        ipcRenderer.send("logout-user")
     });
 
     ipcRenderer.on('add-credits', function (event, credits) {
@@ -205,6 +202,8 @@ app.controller('mainController', function ($scope) {
                 $scope.$apply();
                 ipcRenderer.send("request_oauth_token")
             });
+        } else {
+            showErrorAlert(err.message)
         }
     }
 
@@ -280,8 +279,6 @@ app.controller('mainController', function ($scope) {
             spotifyPlayer.player.play(trackInfo.track.uri, playlistData.playlist_uri);
             loadingTrackUri = trackInfo.track.uri;
             loadingTrack = false
-        } else {
-            console.log("ERROR: PLAYLIST NOT DEFINED!");
         }
     }
 
@@ -294,8 +291,6 @@ app.controller('mainController', function ($scope) {
                     $scope.$apply();
                     completion()
                 });
-            } else {
-                console.log("ERROR: PLAYLIST NOT DEFINED!");
             }
         });
     }
@@ -432,6 +427,10 @@ app.controller('mainController', function ($scope) {
 
     function hideLoading() {
         $scope.loadingHidden = true
+    }
+
+    function showErrorAlert(message) {
+        alert(message)
     }
 
     // START HERE

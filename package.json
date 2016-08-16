@@ -2,7 +2,7 @@
   "name": "SpotifyJukebox",
   "productName": "Spotify Jukebox",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Jukebox for Spotify",
   "repository": "https://bitbucket.org/javikr/jukeboxspotify",
   "license": "MIT",
